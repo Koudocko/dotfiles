@@ -1,13 +1,24 @@
-#/bin/sh
+#!/bin/sh
 
-for entry in *
+# Install specified packages 
+for package in `cat packages` 
 do
-	if [ $entry == install.sh ]
+	if ! pacman -Q $package > /dev/null 2>&1
+	then
+		echo "Package \"$package\" not installed! Prompting for install..."
+		sudo pacman -S $package
+	fi
+done
+
+# Install configs for packages
+for config in *
+do
+	if [ $config == install.sh ]
 	then 
 		continue
 	else
-		echo "Installing $entry config..."
-		sudo cp -r $entry ~/.config
-		echo "Done installing $entry config!"
+		echo "Installing $config config..."
+		cp -r $config ~/.config
+		echo "Done installing $config config!"
 	fi
 done
