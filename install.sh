@@ -13,12 +13,10 @@ done
 # Install configs for packages
 for config in *
 do
-	if [ $config == install.sh ]
-	then 
-		continue
-	else
-		echo "Installing $config config..."
-		cp -r $config ~/.config
-		echo "Done installing $config config!"
+	if [ $config != install.sh ] && [ $config != packages ]  
+	then
+		mkdir -p ~/.config/$config
+		cp -r $config/* ~/.config/$config
+		echo Installed $config config
 	fi
 done

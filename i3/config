@@ -3,7 +3,6 @@
 #
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
-#
 
 # i3 config file (v4)
 #
@@ -34,8 +33,17 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Run polybar on i3 restart
+# Launch polybar on i3-restart
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Audio controls
+bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
+bindsym XF86AudioLowerVolume exec amixer set Master 3%-
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+
+# screen brightness controls
+bindsym xf86monbrightnessup exec light -a 5
+bindsym xf86monbrightnessdown exec light -u 5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -53,24 +61,6 @@ bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
-# Audio controls
-bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
-bindsym XF86AudioLowerVolume exec amixer set Master 3%-
-bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
-
-# Screen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
-
-# Microphone mute toggle
-bindsym XF86AudioMicMute exec amixer set Capture toggle
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
 
 # change focus
 bindsym $mod+h focus left
@@ -159,9 +149,6 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# flameshot gui shortcut
-bindsym Mod4+Shift+s exec flameshot gui
-
 # reload the configuration file
 bindsym $mod+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -196,18 +183,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# keybind for firefox
+# Launches firefox
 bindsym $mod+w exec firefox
+
+# Launches flameshot
+bindsym Mod4+Shift+s exec flameshot gui
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
-#	position top
-#	status_command i3status
+#        status_command i3status
 #}
 
-client.focused #C792EA #C792EA #ffff33 #C792EA #C792EA 
+client.focused #A780E9 #A780E9 #ffff33 #A780E9 #A780E9
 for_window [class=".*"] border pixel 1
-# default_border pixel 3
 gaps inner 5
 gaps outer 5
