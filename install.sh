@@ -16,12 +16,17 @@ then
 fi
 
 # Install configs for packages
-for config in *
+for config in .* *
 do
-	if [ $config != install.sh ] && [ $config != packages ]  
+	if [ $config != install.sh ] && [ $config != packages ] && [ $config != .git ] && [ $config != .. ] && [ $config != . ]
 	then
-		sudo mkdir -p ~/.config/$config
-		sudo cp -r $config/* ~/.config/$config/
-		echo Installed $config config
+		if [ -d "$config" ]
+		then
+			sudo cp -r $config/* ~/$config/
+			echo Installed $config config!
+		else
+			sudo cp $config ~/$config 
+			echo Installed $config config!
+		fi
 	fi
 done
