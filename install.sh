@@ -10,23 +10,14 @@ do
 		PACKAGES+=" $package"	
 	fi
 done
-if ! [ -z "$PACKAGES" ] 
-then
-	sudo pacman -S $PACKAGES
-fi
+sudo pacman -S $PACKAGES 2> /dev/null
 
 # Install configs for packages
-for config in .* *
+for config in configs/.*
 do
-	if [ $config != install.sh ] && [ $config != packages ] && [ $config != .git ] && [ $config != .. ] && [ $config != . ]
+	if [ $config != configs/.. ] && [ $config != configs/. ] 
 	then
-		if [ -d "$config" ]
-		then
-			sudo cp -r $config/* ~/$config/
-			echo Installed $config config!
-		else
-			sudo cp $config ~/$config 
-			echo Installed $config config!
-		fi
+		sudo cp -r $config ~
 	fi
 done
+echo Installed `ls -r configs/.* | wc -l ` configs successfully!
