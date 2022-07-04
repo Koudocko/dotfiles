@@ -50,7 +50,7 @@ do
         sudo cp -r $config ~
     fi
 done
-echo Installed `ls configs/.* | wc -l`  configs successfully!
+echo Installed `ls configs/.* -a | wc -l`  configs successfully!
 
 # Miscellaneous config tweaks 
 echo =====FINALIZING CONFIG=====
