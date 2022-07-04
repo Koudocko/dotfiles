@@ -1,43 +1,34 @@
 #!/bin/sh
 
 # Install specified pacman packages 
-echo _____INSTALLING PACMAN PACKAGES_____
+echo INSTALLING PACMAN PACKAGES
 PACKAGES=
-for package in `cat packages` 
+for package in `cat packages`
 do
-	if ! ((pacman -Q $package > /dev/null 2>&1) || (pacman -Qg $package > /dev/null 2>&1))
-	then
-		echo "[+] Package \"$package\" not installed! Adding to install..."
-		PACKAGES+=" $package"	
-	else
-		echo "[.] Package \"$package\" installed!"
-	fi
+    if ! pacman -Q $package > /dev/null 2>&1; then
+        if pacman -Qg $package > /dev/null 2>&1; then
+            choice=N
+            read -p "Do you want to install $package group? (y/N): " choice
+            if [ "$choice" == "y" ]; then
+                echo "[+] Group "$package" added to install..."
+                PACKAGES+=" $package"
+            fi
+        else
+            echo "[+] Package "$package" not installed! Adding to install..."
+            PACKAGES+=" $package"
+        fi
+    else
+        echo "[.] Package "$package" installed!"
+    fi
 done
-sudo pacman -S $PACKAGES 2> /dev/null
-
-# Install yay package 
-echo _____INSTALLING YAY PACKAGE_____
-if ! pacman -Q yay > /dev/null 2>&1
-then
-	echo "[+] Package \"yay\" not installed! Adding to install..."
-	git clone https://aur.archlinux.org/yay-git.git
-	cd yay-git
-	makepkg -si
-else
-	echo "[.] Package \"yay\" installed!"
-fi
+[ ! -z "$PACKAGES" ] && sudo pacman -S $PACKAGES 
 
 # Install configs for packages
-echo _____INSTALLING PACKAGE CONFIGS_____ 
+echo INSTALLING PACKAGE CONFIGS 
 for config in configs/.*
 do
-	if [ $config != configs/.. ] && [ $config != configs/. ] 
-	then
-		sudo cp -r $config ~
-	fi
+    if [ $config != configs/.. ] && [ $config != configs/. ]; then
+        sudo cp -r $config ~
+    fi
 done
-echo Installed `ls -r configs/.* | wc -l ` configs successfully!
-
-echo ==========================
-echo VIDEO DRIVERS NOT INCLUDED 
-echo ==========================
+echo Installed `ls -r configs/.* | wc -l`  configs successfully!
