@@ -50,3 +50,6 @@ do
     fi
 done
 echo Installed `ls -r configs/.* | wc -l`  configs successfully!
+
+# Miscellaneous config tweaks 
+pacman -Qm vim-plug && vim +'PlugInstall --sync' +qa
