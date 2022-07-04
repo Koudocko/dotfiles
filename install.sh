@@ -52,4 +52,5 @@ done
 echo Installed `ls -r configs/.* | wc -l`  configs successfully!
 
 # Miscellaneous config tweaks 
-pacman -Qm vim-plug && vim +'PlugInstall --sync' +qa
+pacman -Qm vim-plug > /dev/null 2>&1 && vim +'PlugInstall --sync' +qa
+sudo systemctl enable NetworkManager; sudo systemctl enable sshd; sudo systemctl enable systemd-timesyncd
