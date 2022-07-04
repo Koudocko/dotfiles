@@ -17,7 +17,7 @@ do
             PACKAGES+=" $package"
         fi
     else
-        echo "[.] Package ($package) installed!"
+        echo "[.] Package ($package) already installed!"
     fi
 done
 [ ! -z "$PACKAGES" ] && sudo pacman -S $PACKAGES 
@@ -27,7 +27,7 @@ PACKAGES=
 read -p "Do you want to install AUR packages? (y/N)" choice || choice=N
 if [ "$choice" == "y" ]; then
 	echo =====INSTALLING AUR PACKAGES=====
-	! pacman -Q yay > /dev/null 2>&1 && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+	! pacman -Q yay > /dev/null 2>&1 && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ..
 
 	for package in `cat aur_packages`
 	do
@@ -35,7 +35,7 @@ if [ "$choice" == "y" ]; then
 			echo "[+] Package ($package) not installed! Adding to install..."
             PACKAGES+=" $package"
 		else
-			echo "[.] Package ($package) installed!"
+			echo "[.] Package ($package) already installed!"
 		fi
 	done
 	[ ! -z "$PACKAGES" ] && yay -S $PACKAGES
@@ -46,11 +46,13 @@ echo =====INSTALLING PACKAGE CONFIGS======
 for config in configs/.*
 do
     if [ $config != configs/.. ] && [ $config != configs/. ]; then
+		echo "[*] Config ($config) installed!"
         sudo cp -r $config ~
     fi
 done
-echo Installed `ls -r configs/.* | wc -l`  configs successfully!
+echo Installed `ls configs/.* | wc -l`  configs successfully!
 
 # Miscellaneous config tweaks 
+echo =====FINALIZING CONFIG=====
 pacman -Qm vim-plug > /dev/null 2>&1 && vim +'PlugInstall --sync' +qa
 sudo systemctl enable NetworkManager; sudo systemctl enable sshd; sudo systemctl enable systemd-timesyncd
