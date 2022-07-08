@@ -43,11 +43,12 @@ fi
 
 # Install configs for packages
 echo =====INSTALLING PACKAGE CONFIGS======
-for config in configs/.*
+for config in `ls -a configs/` 
 do
-    if [ $config != configs/.. ] && [ $config != configs/. ]; then
+    if [ $config != .. ] && [ $config != . ]; then
 		echo "[*] Config ($config) installed!"
-        sudo cp -r $config ~
+        sudo cp -r configs/$config ~
+		sudo chown -R tyler ~/$config
     fi
 done
 echo Installed `ls configs/.* -a | wc -l`  configs successfully!
