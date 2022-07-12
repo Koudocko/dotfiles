@@ -48,7 +48,7 @@ do
     if [ $config != .. ] && [ $config != . ]; then
 		echo "[*] Config ($config) installed!"
         sudo cp -r configs/$config ~
-		sudo chown -R tyler ~/$config
+		sudo chown -R $USER ~/$config
     fi
 done
 echo Installed `ls configs/.* -a | wc -l`  configs successfully!

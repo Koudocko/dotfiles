@@ -45,8 +45,8 @@ bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle 
 
 # screen brightness controls
-bindsym xf86monbrightnessup exec light -a 5
-bindsym xf86monbrightnessdown exec light -u 5
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
