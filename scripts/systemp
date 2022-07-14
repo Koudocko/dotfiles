@@ -17,4 +17,4 @@ then
 else
 	ICON=
 fi
-echo %{F#A780E9}$ICON %{F-}$TEMPERATURE
+echo %{F#A780E9}$ICON %{F-}$TEMPERATURE°C
