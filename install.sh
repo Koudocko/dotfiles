@@ -46,12 +46,18 @@ echo =====INSTALLING PACKAGE CONFIGS======
 for config in `ls -a configs/` 
 do
     if [ $config != .. ] && [ $config != . ]; then
-		echo "[*] Config ($config) installed!"
-        sudo cp -r configs/$config ~
+		sudo cp -r configs/$config ~ && echo "[*] Config ($config) updated!"
 		sudo chown -R $USER ~/$config
     fi
 done
 echo Installed `ls configs/.* -a | wc -l`  configs successfully!
+
+# Install custom scripts
+echo =====INSTALLING CUSTOM SCRIPTS=====
+for script in `ls scripts/`
+do
+	sudo cp scripts/$script /usr/local/bin && echo "[*] Script ($script) updated!"
+done
 
 # Miscellaneous config tweaks 
 echo =====FINALIZING CONFIG=====
