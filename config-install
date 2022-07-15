@@ -2,13 +2,13 @@
 
 # Check for argument
 if ! id -u "$1" > /dev/null 2>&1; then
-	echo "User $1 not found!"; exit 1
+	echo "User ($1) not found!"; exit 1
 fi
 
 # Install specified pacman packages 
 echo ======INSTALLING PACMAN PACKAGES=====
 PACKAGES=
-for package in `cat pac_packages`
+for package in `cat /usr/local/bin/dotfiles/pac_packages`
 do
     if ! pacman -Q $package > /dev/null 2>&1; then
         if pacman -Qg $package > /dev/null 2>&1; then
@@ -34,7 +34,7 @@ if [ "$choice" == "y" ]; then
 	echo =====INSTALLING AUR PACKAGES=====
 	! pacman -Q yay > /dev/null 2>&1 && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ..
 
-	for package in `cat aur_packages`
+	for package in `cat /usr/local/bin/dotfiles/aur_packages`
 	do
 	    if ! pacman -Qm $package > /dev/null 2>&1; then
 			echo "[+] Package ($package) not installed! Adding to install..."
@@ -48,20 +48,20 @@ fi
 
 # Install configs for packages
 echo =====INSTALLING PACKAGE CONFIGS======
-for config in `ls -a configs/` 
+for config in `ls -a /usr/local/bin/dotfiles/configs/` 
 do
     if [ $config != .. ] && [ $config != . ]; then
-		sudo cp -r configs/$config /home/$1 && echo "[*] Config ($config) updated!"
+		sudo cp -r /usr/local/bin/dotfiles/configs/$config /home/$1 && echo "[*] Config ($config) updated!"
 		sudo chown -R $1 /home/$1/$config
     fi
 done
-echo Installed `ls configs/.* -a | wc -l`  configs successfully!
+echo Installed `ls /usr/local/bin/dotfiles/configs/.* -a | wc -l`  configs successfully!
 
 # Install custom scripts
 echo =====INSTALLING CUSTOM SCRIPTS=====
-for script in `ls scripts/`
+for script in `ls /usr/local/bin/dotfiles/scripts/`
 do
-	sudo cp scripts/$script /usr/local/bin && echo "[*] Script ($script) updated!"
+	sudo cp /usr/local/bin/dotfiles/scripts/$script /usr/local/bin && echo "[*] Script ($script) updated!"
 done
 
 # Miscellaneous config tweaks 
