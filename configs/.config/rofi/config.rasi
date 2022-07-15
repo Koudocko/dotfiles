@@ -8,7 +8,7 @@
     selected-normal-foreground:  rgba ( 249, 249, 249, 100 % );
     foreground:                  rgba ( 196, 203, 212, 100 % );
     normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 64, 69, 82, 59 % );
+    alternate-normal-background: rgba ( 30, 33, 39, 100 % );
     red:                         rgba ( 220, 50, 47, 100 % );
     selected-urgent-foreground:  rgba ( 249, 249, 249, 100 % );
     blue:                        rgba ( 38, 139, 210, 100 % );
@@ -18,15 +18,14 @@
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 249, 249, 249, 100 % );
     alternate-active-background: rgba ( 75, 81, 96, 89 % );
-    background:                  rgba ( 45, 48, 59, 100 % );
+    background:                  rgba ( 30, 33, 39, 100 % );
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
     selected-normal-background:  rgba ( 167, 128, 233, 100 % );
-    /*selected-normal-background:  rgba ( 64, 132, 214, 100 % );*/
     border-color:                rgba ( 167, 128, 233, 100 % );
     spacing:                     2;
-    separatorcolor:              rgba ( 29, 31, 33, 100 % );
+    separatorcolor:              rgba ( 30, 33, 39, 100 % );
     urgent-background:           rgba ( 29, 31, 33, 17 % );
     selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
     alternate-urgent-foreground: @urgent-foreground;
@@ -57,7 +56,7 @@ listview {
     border:       2px 0px 0px ;
     border-color: @separatorcolor;
     spacing:      2px ;
-    scrollbar:    true;
+    scrollbar:    false;
     padding:      2px 0px 0px ;
 }
 element {
@@ -123,11 +122,7 @@ button.selected {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
-inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    1px ;
-}
+
 case-indicator {
     spacing:    0;
     text-color: @normal-foreground;

@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Check for argument
+if ! id -u "$1" > /dev/null 2>&1; then
+	echo "User $1 not found!"; exit 1
+fi
+
 # Install specified pacman packages 
 echo ======INSTALLING PACMAN PACKAGES=====
 PACKAGES=
@@ -46,8 +51,8 @@ echo =====INSTALLING PACKAGE CONFIGS======
 for config in `ls -a configs/` 
 do
     if [ $config != .. ] && [ $config != . ]; then
-		sudo cp -r configs/$config ~ && echo "[*] Config ($config) updated!"
-		sudo chown -R $USER ~/$config
+		sudo cp -r configs/$config /home/$1 && echo "[*] Config ($config) updated!"
+		sudo chown -R $1 /home/$1/$config
     fi
 done
 echo Installed `ls configs/.* -a | wc -l`  configs successfully!
