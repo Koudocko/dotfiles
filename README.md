@@ -1,10 +1,10 @@
 # dotfiles
 
 ## How to Install:
-1. Git clone this repo in your /usr/local/bin directory 
-2. Move the config-install script from /usr/local/bin/dotfiles to /usr/local/bin 
-3. Run config-install {user} 
-4. All scripts, configs, and programs in the dotfiles directory will be installed 
+1. Move the config-install script to /usr/local/bin 
+2. Set the environment variable CFGDIR to the dotfiles path
+2. Run config-install {user} 
+3. All scripts, configs, and programs in the dotfiles directory will be installed 
 
 ## How to configure
 - The dotfiles/configs directory represents your ~ or /home/{user} directory 
