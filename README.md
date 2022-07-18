@@ -2,7 +2,7 @@
 
 ## How to Install:
 1. Move the config-install script to /usr/local/bin 
-2. Set the environment variable CFGDIR to the dotfiles path
+2. Set the environment variable DOTDIR to the dotfiles path
 2. Run config-install {user} 
 3. All scripts, configs, and programs in the dotfiles directory will be installed 
 
