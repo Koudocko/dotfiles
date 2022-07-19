@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 # PS1='[\u@\h \W]\$ '
-PS1='[\W] '
+PS1='[\W] > '
 
 n ()
 {
@@ -30,7 +30,7 @@ n ()
     # stty lwrap undef
     # stty lnext undef
 
-    nnn -Red "$@"
+    nnn -Re "$@"
 
     if [ -f "$NNN_TMPFILE" ]; then
             . "$NNN_TMPFILE"
