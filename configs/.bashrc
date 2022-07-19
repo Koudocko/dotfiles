@@ -29,7 +29,7 @@ n(){
 	# stty lwrap undef
 	# stty lnext undef
 
-	nnn -Re "$@"
+	nnn -Red "$@"
 
 	if [ -f "$NNN_TMPFILE" ]; then
 		. "$NNN_TMPFILE"
