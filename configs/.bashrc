@@ -41,6 +41,6 @@ export DOTDIR=~/Documents/dotfiles
 
 export EDITOR=vim
 export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos'
-export NNN_PLUG='p:preview-tui'
+export NNN_PLUG='f:fzcd;o:fzopen'
 export NNN_FCOLORS='8D8D8D8D8D8D8D8D8D8D8D8D'
 export NNN_COLORS='#8D8D8D8D8D'
