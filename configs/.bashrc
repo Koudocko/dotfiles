@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
+
 alias ls='ls --color=auto'
 # PS1='[\u@\h \W]\$ '
 PS1='[\W] > '
@@ -29,7 +31,7 @@ n(){
 	# stty lwrap undef
 	# stty lnext undef
 
-	nnn -Red "$@"
+	nnn -Read "$@"
 
 	if [ -f "$NNN_TMPFILE" ]; then
 		. "$NNN_TMPFILE"
@@ -42,6 +44,6 @@ export FZF_DEFAULT_COMMAND="find -L"
 
 export EDITOR=vim
 export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos'
-export NNN_PLUG='f:fzcd;o:fzopen'
+export NNN_PLUG='f:fzcd;o:fzopen;p:preview-tui;i:imgview'
 export NNN_FCOLORS='8D8D8D8D8D8D8D8D8D8D8D8D'
 export NNN_COLORS='#8D8D8D8D8D'
