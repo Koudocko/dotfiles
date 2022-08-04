@@ -69,4 +69,4 @@ done
 # Miscellaneous config tweaks 
 echo =====FINALIZING CONFIG=====
 pacman -Qm vim-plug > /dev/null 2>&1 && vim +'PlugInstall --sync' +qa
-sudo systemctl enable NetworkManager; sudo systemctl enable sshd; sudo systemctl enable systemd-timesyncd
+sudo systemctl enable NetworkManager; sudo systemctl enable sshd; sudo systemctl enable systemd-timesyncd; sudo systemctl enable paccache.timer
