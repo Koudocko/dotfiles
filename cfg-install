@@ -70,3 +70,4 @@ done
 echo =====FINALIZING CONFIG=====
 pacman -Qm vim-plug > /dev/null 2>&1 && vim +'PlugInstall --sync' +qa
 sudo systemctl enable NetworkManager; sudo systemctl enable sshd; sudo systemctl enable systemd-timesyncd; sudo systemctl enable paccache.timer
+vim +'CocInstall coc-rust-analyzer coc-pairs coc-json' +qa
