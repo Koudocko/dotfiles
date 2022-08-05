@@ -7,7 +7,6 @@
 
 [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
 
-alias ls='ls --color=auto'
 # PS1='[\u@\h \W]\$ '
 PS1='[\W] > '
 
@@ -47,3 +46,6 @@ export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents
 export NNN_PLUG='f:fzcd;o:fzopen;p:preview-tui;i:imgview'
 export NNN_FCOLORS='8D8D8D8D8D8D8D8D8D8D8D8D'
 export NNN_COLORS='#8D8D8D8D8D'
+
+alias ls='ls --color=auto'
+alias nnn='nnn -Read'
