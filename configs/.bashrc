@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
+[[ `tty` != *"/dev/tty"* ]] && [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
 
 # PS1='[\u@\h \W]\$ '
 PS1='[\W] > '
