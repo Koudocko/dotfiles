@@ -49,3 +49,7 @@ export NNN_COLORS='#8D8D8D8D8D'
 
 alias ls='ls --color=auto'
 alias nnn='nnn -Read'
+
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
