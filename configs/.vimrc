@@ -18,6 +18,8 @@ Plug 'junegunn/fzf.vim'
 " Initialize plugin system
 call plug#end()
 
+let mapleader=" "
+
 set number
 set relativenumber
 set ts=4 sw=4
