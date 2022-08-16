@@ -1,3 +1,8 @@
+mouse_bindings:
+  - { mouse: Right,  action: ReceiveChar }
+mouse:
+  hide_when_typing: true
+
 font:
   normal:
     family: JetBrains Mono
