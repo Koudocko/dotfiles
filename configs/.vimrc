@@ -40,7 +40,12 @@ set updatetime=300
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-set signcolumn=no
+set signcolumn=yes
+highlight SignColumn ctermbg=black
+highlight CocErrorSign ctermfg=red
+highlight CocWarningSign ctermfg=yellow
+highlight CocErrorHighlight ctermfg=red
+highlight CocWarningHighlight ctermfg=yellow
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
