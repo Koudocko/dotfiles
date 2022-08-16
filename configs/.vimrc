@@ -22,6 +22,8 @@ let mapleader=" "
 
 set number
 set relativenumber
+highlight LineNr ctermfg=141
+highlight EndOfBuffer ctermfg=black
 set ts=4 sw=4
 set mouse=a
 
