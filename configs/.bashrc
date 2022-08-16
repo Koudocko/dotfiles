@@ -39,7 +39,7 @@ n(){
 }
 
 export DOTDIR=~/Documents/dotfiles
-export FZF_DEFAULT_COMMAND="find -L"
+export FZF_DEFAULT_COMMAND="find"
 
 export EDITOR=vim
 export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos'
