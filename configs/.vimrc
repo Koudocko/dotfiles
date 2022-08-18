@@ -15,6 +15,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Fuzzy finder
 Plug 'junegunn/fzf.vim'
 
+" Commenter
+Plug 'tpope/vim-commentary'
+
 " Initialize plugin system
 call plug#end()
 
@@ -27,10 +30,12 @@ highlight EndOfBuffer ctermfg=black
 set ts=4 sw=4
 set mouse=a
 
+iabbrev mgh https://github.com/Koudocko
+
 syntax on
 hi Pmenu ctermbg=235 ctermfg=141
 
-imap jj <Esc>
+inoremap jj <Esc>
 
 " Some servers have issues with backup files, see #649.
 set nobackup
