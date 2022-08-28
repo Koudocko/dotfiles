@@ -31,6 +31,12 @@ set ts=4 sw=4
 set mouse=a
 
 iabbrev mgh https://github.com/Koudocko
+iabbrev cppini 
+\#include <iostream>
+\<CR>
+\<CR>int main(){
+\<CR>
+\<CR>}<Esc>ki
 
 syntax on
 hi Pmenu ctermbg=235 ctermfg=141
