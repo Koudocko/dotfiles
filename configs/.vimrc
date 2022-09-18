@@ -18,9 +18,6 @@ Plug 'junegunn/fzf.vim'
 " Commenter
 Plug 'tpope/vim-commentary'
 
-" Math stuff
-Plug 'ntessore/unicode-math.vim'
-
 " Initialize plugin system
 call plug#end()
 
@@ -37,10 +34,6 @@ iabbrev mgh https://github.com/Koudocko
 
 syntax on
 hi Pmenu ctermbg=235 ctermfg=141
-
-set keymap=unicode-math
-set iminsert=0
-set imsearch=-1
 
 inoremap jj <Esc>
 
