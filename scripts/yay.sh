@@ -4,7 +4,7 @@
 ! pacman -Q yay > /dev/null 2>&1 && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && sudo rm ../yay -r 
 
 if pacman -Q yay > /dev/null 2>&1; then
-	list="vim-plug phinger-cursors icons-in-terminal ani-cli"
+	list="vim-plug ani-cli"
 	packages=
 
 	for package in $list
