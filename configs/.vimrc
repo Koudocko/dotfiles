@@ -36,6 +36,9 @@ syntax on
 hi Pmenu ctermbg=235 ctermfg=141
 
 inoremap jk <Esc>
+nnoremap <C-W> :update<CR>
+vnoremap <C-W> <C-C>:update<CR>
+inoremap <C-W> <C-O>:update<CR>
 
 " Some servers have issues with backup files, see #649.
 set nobackup
