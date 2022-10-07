@@ -27,7 +27,7 @@ set number
 set relativenumber
 highlight LineNr ctermfg=141
 highlight EndOfBuffer ctermfg=black
-set ts=4 sw=4
+set ts=2 sw=2
 set mouse=a
 
 iabbrev mgh https://github.com/Koudocko
@@ -35,7 +35,7 @@ iabbrev mgh https://github.com/Koudocko
 syntax on
 hi Pmenu ctermbg=235 ctermfg=141
 
-inoremap jj <Esc>
+inoremap jk <Esc>
 
 " Some servers have issues with backup files, see #649.
 set nobackup
