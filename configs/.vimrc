@@ -36,9 +36,15 @@ syntax on
 hi Pmenu ctermbg=235 ctermfg=141
 
 inoremap jk <Esc>
-nnoremap <C-W> :update<CR>
-vnoremap <C-W> <C-C>:update<CR>
-inoremap <C-W> <C-O>:update<CR>
+nnoremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
+
+map <C-Q> <Nop>
+nnoremap <C-Q> :quit!<CR>
+vnoremap <C-Q> <C-C>:quit!<CR>
+inoremap <C-Q> <C-O>:quit!<CR>
+
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -143,11 +149,6 @@ xmap ic <Plug>(coc-classobj-i)
 omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
-
-" Use CTRL-S for selections ranges.
-" Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocActionAsync('format')
