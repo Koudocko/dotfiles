@@ -37,14 +37,9 @@ hi Pmenu ctermbg=235 ctermfg=141
 
 inoremap jk <Esc>
 nnoremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
-
 map <C-Q> <Nop>
 nnoremap <C-Q> :quit!<CR>
-vnoremap <C-Q> <C-C>:quit!<CR>
-inoremap <C-Q> <C-O>:quit!<CR>
-
+nnoremap U <C-R>
 
 " Some servers have issues with backup files, see #649.
 set nobackup
