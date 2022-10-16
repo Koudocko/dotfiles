@@ -23,6 +23,9 @@ call plug#end()
 
 let mapleader=" "
 
+nnoremap <C-O> O<Esc>
+nnoremap <CR> o<Esc>
+
 set number
 set relativenumber
 highlight LineNr ctermfg=141
