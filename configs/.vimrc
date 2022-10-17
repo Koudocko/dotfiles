@@ -23,7 +23,7 @@ call plug#end()
 
 let mapleader=" "
 
-nnoremap <C-O> O<Esc>
+nnoremap <BS> O<Esc>
 nnoremap <CR> o<Esc>
 
 set number
