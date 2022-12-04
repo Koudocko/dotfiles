@@ -43,6 +43,8 @@ nnoremap <C-S> :update<CR>
 map <C-Q> <Nop>
 nnoremap <C-Q> :quit!<CR>
 nnoremap U <C-R>
+nnoremap <C-U> <C-U>zz
+nnoremap <C-D> <C-D>zz
 
 " Some servers have issues with backup files, see #649.
 set nobackup
