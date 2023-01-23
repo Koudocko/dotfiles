@@ -38,6 +38,8 @@ n(){
 	fi
 }
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 export DOTDIR=~/Documents/dotfiles
 export FZF_DEFAULT_COMMAND="find"
 
