@@ -10,6 +10,8 @@
 # PS1='[\u@\h \W]\$ '
 PS1='[\W] > '
 
+xmodmap -e "pointer = 1 2 3" > /dev/null 2>&1
+
 n(){
 	# Block nesting of nnn in subshells
 	if [[ "${NNNLVL:-0}" -ge 1 ]]; then
@@ -55,3 +57,4 @@ alias cl='clear'
 alias neo='neofetch'
 alias syspo='systemctl poweroff'
 alias sysrb='systemctl reboot'
+alias vidsave='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
