@@ -40,6 +40,10 @@ n(){
 	fi
 }
 
+function vidtrim(){
+	ffmpeg -i "$1" -ss "$3" -to "$4" -c:v copy -c:a copy "$2"
+}
+
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export DOTDIR=~/Documents/dotfiles
