@@ -41,7 +41,13 @@ n(){
 }
 
 function vidtrim(){
-	ffmpeg -i "$1" -ss "$3" -to "$4" -c:v copy -c:a copy "$2"
+	if [ "$3" == "-" ]; then
+		ffmpeg -i "$1" -to "$4" -c:v copy -c:a copy "$2"
+	elif [ "$4" == "-" ]; then
+		ffmpeg -i "$1" -ss "$3" -c:v copy -c:a copy "$2"
+	else
+		ffmpeg -i "$1" -ss "$3" -to "$4" -c:v copy -c:a copy "$2"
+	fi
 }
 
 export PATH="$HOME/.cargo/bin:$PATH"
