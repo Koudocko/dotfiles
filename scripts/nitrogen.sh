@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo "[geometry]
 posx=9
 posy=48
