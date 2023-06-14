@@ -1,5 +1,9 @@
 #!/bin/sh
 
+mkdir ~/.config/nitrogen/ -p
+touch ~/.config/nitrogen/nitrogen.cfg 
+touch ~/.config/nitrogen/bg-saved.cfg
+
 echo "[geometry]
 posx=9
 posy=48
