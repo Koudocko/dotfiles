@@ -1,0 +1,12 @@
+set selection-clipboard clipboard
+set font "JetBrains Mono 12"
+set statusbar-bg "#A780E9"
+set statusbar-fg "#1E2127"
+set index-bg "#1E2127"
+set index-fg "#C5C8C6"
+set index-active-bg "#A780E9"
+set index-active-fg "#1E2127"
+set notification-bg "#1E2127"
+set notification-fg "#C5C8C6"
+set inputbar-bg "#1E2127"
+set inputbar-fg "#C5C8C6"

@@ -12,7 +12,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:JetBrains Mono 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -52,7 +52,7 @@ bindsym XF86MonBrightnessDown exec light -U 5
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty 
+bindsym $mod+Return exec WINIT_X11_SCALE_FACTOR=1 alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -110,10 +110,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+p focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+o focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -159,7 +159,6 @@ assign [class="discord"] $ws3
 assign [class="code-oss"] $ws4
 assign [class="Steam"] $ws5
 assign [class="mpv"] $ws6
-assign [class="vlc"] $ws6
 assign [class="obs"] $ws6
 assign [class="Sxiv"] $ws6
 
@@ -170,7 +169,6 @@ for_window [class=discord] focus
 for_window [class=code-oss] focus 
 for_window [class=Steam] focus 
 for_window [class=mpv] focus 
-for_window [class=vlc] focus 
 for_window [class=obs] focus 
 for_window [class=Sxiv] focus 
 
@@ -179,7 +177,8 @@ bindsym $mod+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -226,7 +225,11 @@ bindsym $mod+Shift+i exec "i3lock -c 000000"
 #        status_command i3status
 #}
 
-client.focused #A780E9 #A780E9 #ffff33 #A780E9 #A780E9
+client.focused #A780E9 #A780E9 #1E2127 #A780E9 
+client.focused_inactive #A780E9 #A780E9 #1E2127 #A780E9 
+# client.focused_inactive #1E2127 #1E2127 #C5C8C6 #1E2127 
+client.unfocused #1E2127 #1E2127 #C5C8C6 #1E2127 
+client.urgent #A54242 #A542422 #1E212 #A54242 
 for_window [class=".*"] border pixel 1
 gaps inner 5
 gaps outer 5
