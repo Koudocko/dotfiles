@@ -41,8 +41,9 @@ bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 5%-
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
-# microphone toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle 
+# Microphone controls
+bindsym XF86AudioMicMute exec amixer -D pulse set Capture toggle
+bindsym $mod+m exec amixer -D pulse set Capture toggle
 
 # screen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5
