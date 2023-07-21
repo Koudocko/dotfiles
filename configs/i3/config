@@ -53,7 +53,8 @@ bindsym XF86MonBrightnessDown exec light -U 5
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec WINIT_X11_SCALE_FACTOR=1 alacritty
+bindsym $mod+Shift+Return exec WINIT_X14_SCALE_FACTOR=1 alacritty -e tmux attach || tmux new-session
+bindsym $mod+Return exec WINIT_X14_SCALE_FACTOR=1 alacritty 
 
 # kill focused window
 bindsym $mod+q kill
