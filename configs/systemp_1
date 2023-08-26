@@ -23,4 +23,4 @@ then
 else
 	ICON=
 fi
-echo %{F#A780E9}$ICON %{F-}$TEMPERATURE°C
+echo %{F#807BF9}$ICON %{F-}$TEMPERATURE°C

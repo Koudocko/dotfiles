@@ -37,8 +37,8 @@ export FZF_DEFAULT_COMMAND="find"
 export EDITOR=vim
 export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos'
 export NNN_PLUG='f:fzcd;o:fzopen;p:preview-tui;i:imgview'
-export NNN_FCOLORS='8D8D8D8D8D8D8D8D8D8D8D8D'
-export NNN_COLORS='#8D8D8D8D8D'
+export NNN_FCOLORS='696969696969696969696969'
+export NNN_COLORS='#6969696969'
 
 alias ls='ls --color=auto'
 alias nnn='nnn -Read'

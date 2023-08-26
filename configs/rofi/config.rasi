@@ -2,6 +2,7 @@
  * ROFI Color theme
  * User: leofa
  * Copyright: 2017 leofa
+ * Color = rgba ( 128, 123, 249, 100 % )
  ***********************************************/
 
 * {
@@ -22,8 +23,8 @@
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 167, 128, 233, 100 % );
-    border-color:                rgba ( 167, 128, 233, 100 % );
+    selected-normal-background:  rgba ( 128, 123, 249, 100 % );
+    border-color:                rgba ( 128, 123, 249, 100 % );
     spacing:                     2;
     separatorcolor:              rgba ( 30, 33, 39, 100 % );
     urgent-background:           rgba ( 29, 31, 33, 17 % );

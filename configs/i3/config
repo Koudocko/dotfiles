@@ -227,8 +227,8 @@ bindsym $mod+Shift+i exec "i3lock -c 000000"
 #        status_command i3status
 #}
 
-client.focused #A780E9 #A780E9 #1E2127 #A780E9 
-client.focused_inactive #A780E9 #A780E9 #1E2127 #A780E9 
+client.focused #807BF9 #807BF9 #1E2127 #807BF9 
+client.focused_inactive #807BF9 #807BF9 #1E2127 #807BF9 
 # client.focused_inactive #1E2127 #1E2127 #C5C8C6 #1E2127 
 client.unfocused #1E2127 #1E2127 #C5C8C6 #1E2127 
 client.urgent #A54242 #A542422 #1E212 #A54242 

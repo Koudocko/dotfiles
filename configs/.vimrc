@@ -28,7 +28,7 @@ nnoremap <CR> o<Esc>
 
 set number
 set relativenumber
-highlight LineNr ctermfg=141
+highlight LineNr ctermfg=105
 highlight EndOfBuffer ctermfg=black
 set ts=2 sw=2
 set mouse=a
@@ -36,7 +36,7 @@ set mouse=a
 iabbrev mgh https://github.com/Koudocko
 
 syntax on
-hi Pmenu ctermbg=235 ctermfg=141
+hi Pmenu ctermbg=235 ctermfg=105
 
 inoremap jk <Esc>
 nnoremap <C-S> :update<CR>
