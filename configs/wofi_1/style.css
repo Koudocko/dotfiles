@@ -4,11 +4,13 @@
 	padding: 0;
 	outline: none;
 	color: #D1C2E9;
+	box-shadow: none;
 }
 
 window{
 	font-family: "JetBrains Mono Medium";
 	background-color: #1E2127;
+	border-radius: 10px;
 }
 
 #outer-box{
