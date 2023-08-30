@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if [[ `amixer -D pulse sget Capture` == *"[on]"* ]]; then
-	MSG="%{F#A780E9} %{F-}"`amixer -D pulse sget Capture | grep -oE '\[[^]]+\]' | sed 's/\[//;s/\]//' | head -n1` 
+	MSG="%{F#807BF7} %{F-}"`amixer -D pulse sget Capture | grep -oE '\[[^]]+\]' | sed 's/\[//;s/\]//' | head -n1` 
 else
-	MSG="%{F#A780E9} %{F#707880}muted"
+	MSG="%{F#807BF7} %{F#707880}muted"
 fi
 echo $MSG
