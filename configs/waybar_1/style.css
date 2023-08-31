@@ -1,7 +1,6 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, JetBrains Mono Medium;
-    font-size: 13px;
+    font-size: 15px;
     box-shadow: none;
     outline: none;
     border: none;
@@ -62,16 +61,60 @@ window#waybar {
 }
 
 #pulseaudio {
+    /* color: #F77B7B; */
+    color: #7BaBf7;
     border-left-style: solid;
     border-left-width: 3px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
-#tray {
+#backlight {
+    /* color: #F7C17B; */
+    color: #7BaBf7;
+}
+
+#network {
+    /* color: #F7F57B; */
+    color: #7BaBf7;
+}
+
+#cpu {
+    /* color: #9CF77B; */
+    color: #7B85F7;
+}
+
+#memory {
+    /* color: #7BF79C; */
+    color: #7B85F7;
+}
+
+#disk {
+    /* color: #7BC3F7; */
+    color: #7B85F7;
+}
+
+#temperature {
+    /* color: #7B85F7; */
+    color: #A87BF7;
+}
+
+#battery {
+    /* color: #C87BF7; */
+    color: #A87BF7;
+}
+
+#clock {
+    /* color: #F77BF0; */
+    color: #A87BF7;
     border-right-style: solid;
     border-right-width: 3px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
+#tray {
+   border-style: solid;
+   border-width: 3px;
+   border-radius: 10px;
+}
