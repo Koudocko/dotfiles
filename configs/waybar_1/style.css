@@ -27,6 +27,11 @@ window#waybar {
     color: #F77B7B;
 }
 
+#workspaces button:hover {
+    background: none;
+    border: none;
+}
+
 #pulseaudio,
 #backlight,
 #network,
