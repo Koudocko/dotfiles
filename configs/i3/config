@@ -158,8 +158,8 @@ assign [class="Alacritty"] $ws1
 assign [class="firefox"] $ws2
 assign [class="Chromium"] $ws2
 assign [class="discord"] $ws3
-assign [class="code-oss"] $ws4
 assign [class="Steam"] $ws5
+assign [class="osu!"] $ws5
 assign [class="mpv"] $ws6
 assign [class="obs"] $ws6
 assign [class="Sxiv"] $ws6
@@ -168,11 +168,11 @@ for_window [class=Alacritty] focus
 for_window [class=firefox] focus 
 for_window [class=Chromium] focus 
 for_window [class=discord] focus 
-for_window [class=code-oss] focus 
 for_window [class=Steam] focus 
 for_window [class=mpv] focus 
 for_window [class=obs] focus 
 for_window [class=Sxiv] focus 
+for_window [class=osu!] focus 
 
 # reload the configuration file
 bindsym $mod+c reload
@@ -227,8 +227,8 @@ bindsym $mod+Shift+i exec "i3lock -c 000000"
 #        status_command i3status
 #}
 
-client.focused #807BF9 #807BF9 #1E2127 #807BF9 
-client.focused_inactive #807BF9 #807BF9 #1E2127 #807BF9 
+client.focused #807bf7 #807bf7 #1E2127 #807bf7 
+client.focused_inactive #807bf7 #807bf7 #1E2127 #807bf7 
 # client.focused_inactive #1E2127 #1E2127 #C5C8C6 #1E2127 
 client.unfocused #1E2127 #1E2127 #C5C8C6 #1E2127 
 client.urgent #A54242 #A542422 #1E212 #A54242 

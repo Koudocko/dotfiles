@@ -4,7 +4,7 @@
 
 
 if pacman -Q yay > /dev/null 2>&1; then
-	list="vim-plug ani-cli"
+	list="vim-plug ani-cli osu-lazer-bin"
 	packages=
 
 	for package in $list
