@@ -22,7 +22,7 @@ window{
 
 #entry{
 	padding: 0.5em;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 #entry:selected{
@@ -32,7 +32,7 @@ window{
 #input{
 	background-color: #1E2127;
 	padding: 0.5em;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 image{

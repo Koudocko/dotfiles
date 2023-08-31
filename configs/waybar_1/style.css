@@ -15,7 +15,7 @@ window#waybar {
 #workspaces button {
     background-color: #1E2127;
     color: #D1C2E9;
-    padding: 0 5px;
+    padding-right: 10px;
 }
 
 #workspaces button.active {
@@ -27,29 +27,35 @@ window#waybar {
     color: #F77B7B;
 }
 
-#clock,
-#battery,
+#pulseaudio,
+#backlight,
+#network,
 #cpu,
 #memory,
 #disk,
 #temperature,
-#backlight,
-#network,
-#pulseaudio,
+#battery,
+#clock,
 #tray {
     color: #D1C2E9;
-    padding: 0 10px;
+    padding: 5px 10px 5px 10px;
     border-color: #807BF7;
     border-top-style: solid;
     border-top-width: 3px;
     border-bottom-style: solid;
     border-bottom-width: 3px;
     background-color: #1E2127;
+    margin-top: 8px; 
 }
 
-#window,
-#workspaces {
-    margin: 0 4px;
+#workspaces{
+    padding: 5px 0px 5px 10px;
+    margin: 8px 8px 0px 8px;
+}
+
+#tray {
+    padding: 5px 10px 5px 10px;
+    margin: 8px 8px 0px 8px;
 }
 
 .modules-left > widget:first-child > #workspaces {

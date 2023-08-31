@@ -1,7 +1,7 @@
 {
     "layer": "top", 
     "position": "top", 
-    "height": 35,
+    "height": 0,
     "spacing": 0, 
     "modules-left": ["wlr/workspaces"],
     "modules-center": ["pulseaudio", "backlight", "network", "cpu", "memory", "disk", "temperature", "keyboard-state", "wlr/language", "battery", "clock"],
