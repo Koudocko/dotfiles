@@ -99,9 +99,6 @@
         "format-icons": ["", "", "", "", ""],
         "tooltip": false
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
     "clock": {
         // "timezone": "America/New_York",
         "format": "{:%Y-%m-%d}",
