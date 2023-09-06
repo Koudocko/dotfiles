@@ -136,8 +136,13 @@ require("tokyonight").setup({
   ---@param colors ColorScheme
   on_colors = function(colors)
     colors.bg = "#1E2127"
-    colors.bg_statusline = "#1E2127"
+    colors.bg_dark = "#1E2127"
     colors.bg_float = "#1E2127"
+    colors.bg_highlight = "#1E2127"
+    colors.bg_popup = "#1E2127"
+    colors.bg_search = "#1E2127"
+    colors.bg_sidebar = "#1E2127"
+    colors.bg_statusline = "#1E2127"
     colors.border = "#807BF7"
     colors.border_highlight = "#807BF7"
     colors.fg = "#D1C2E9"
