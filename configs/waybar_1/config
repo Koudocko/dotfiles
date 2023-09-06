@@ -3,10 +3,10 @@
     "position": "top", 
     "height": 0,
     "spacing": 0, 
-    "modules-left": ["wlr/workspaces"],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": ["pulseaudio", "backlight", "network", "cpu", "memory", "disk", "temperature", "battery", "clock"],
     "modules-right": ["tray"],
-     "wlr/workspaces": {
+     "hyprland/workspaces": {
          "disable-scroll": true,
          "all-outputs": true,
          "warp-on-scroll": false,
@@ -80,7 +80,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-	"format-alt": "{temperatureF}°F {temperatureK}K {icon}",
+        "format-alt": "{temperatureF}°F {temperatureK}K {icon}",
         "format-icons": ["", "", ""],
         "tooltip": false
     },
