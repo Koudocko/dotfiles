@@ -34,7 +34,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export DOTDIR=~/Documents/dotfiles
 export FZF_DEFAULT_COMMAND="find"
 
-export EDITOR=vim
+export EDITOR=nvim
 export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos'
 export NNN_PLUG='f:fzcd;o:fzopen;p:preview-tui;i:imgview'
 export NNN_FCOLORS='696969696969696969696969'

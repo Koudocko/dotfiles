@@ -4,7 +4,7 @@
     "height": 0,
     "spacing": 0, 
     "modules-left": ["wlr/workspaces"],
-    "modules-center": ["pulseaudio", "backlight", "network", "cpu", "memory", "disk", "temperature", "keyboard-state", "wlr/language", "battery", "clock"],
+    "modules-center": ["pulseaudio", "backlight", "network", "cpu", "memory", "disk", "temperature", "battery", "clock"],
     "modules-right": ["tray"],
      "wlr/workspaces": {
          "disable-scroll": true,
