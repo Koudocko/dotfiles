@@ -140,11 +140,7 @@ require("tokyonight").setup({
     colors.bg_float = "#1E2127"
     colors.border = "#807BF7"
     colors.border_highlight = "#807BF7"
-    colors.bg_visual = "#807BF7"
-    colors.fg_gutter = "#807BF7"
-    colors.fg_sidebar = "#807BF7"
-    colors.fg_dark = "#807BF7"
-    colors.fg = "#807BF7"
+    colors.fg = "#D1C2E9"
   end,
 
   --- You can override specific highlights to use other groups or a hex color
