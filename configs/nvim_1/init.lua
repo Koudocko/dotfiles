@@ -18,4 +18,3 @@ vim.api.nvim_create_autocmd('filetype', {
     bind('n', '%')
   end
 })
-

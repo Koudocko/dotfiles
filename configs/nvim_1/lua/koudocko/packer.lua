@@ -36,6 +36,8 @@ return require('packer').startup(function(use)
 
   use('tpope/vim-commentary')
 
+  -- use('ap/vim-css-color')
+
   use('jiangmiao/auto-pairs')
 
   use('lambdalisue/suda.vim')
@@ -47,4 +49,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
 
   use('norcalli/nvim-colorizer.lua')
+
+  use('lewis6991/gitsigns.nvim')
+
 end)
