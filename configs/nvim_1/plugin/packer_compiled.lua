@@ -173,11 +173,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tyler/.local/share/nvim/site/pack/packer/start/vim-css-color",
     url = "https://github.com/ap/vim-css-color"
-  },
-  ["vim-latex-live-preview"] = {
-    loaded = true,
-    path = "/home/tyler/.local/share/nvim/site/pack/packer/start/vim-latex-live-preview",
-    url = "https://github.com/xuhdev/vim-latex-live-preview"
   }
 }
 
