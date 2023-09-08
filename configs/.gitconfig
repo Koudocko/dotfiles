@@ -1,3 +1,5 @@
 [user]
 	email = tyler@pcquest.ca
 	name = Koudocko
+[init]
+	defaultBranch = main
