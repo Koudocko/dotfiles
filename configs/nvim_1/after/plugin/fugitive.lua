@@ -1,1 +1,7 @@
 vim.keymap.set("n", "<leader>g", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gs", ":Git status<cr>")
+vim.keymap.set("n", "<leader>gl", ":Git log<cr>")
+vim.keymap.set("n", "<leader>gb", ":Git branch<cr>")
+vim.keymap.set("n", "<leader>gd", ":Gdiffsplit<cr>")
+vim.keymap.set("n", "<leader>gm", ":Gdiffsplit!<cr>")
+vim.keymap.set("n", "<leader>gt", ":G difftool -y<cr>")
