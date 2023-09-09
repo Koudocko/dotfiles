@@ -6,6 +6,6 @@ gtk-menu-images=1
 gtk-button-images=1
 gtk-cursor-theme-size=24
 gtk-cursor-theme-name="phinger-cursors"
-gtk-icon-theme-name="Breeze-Dark"
-gtk-font-name="Jetbrains Mono Medium,  10"
+gtk-icon-theme-name="Papirus-Dark"
+gtk-font-name="JetBrains Mono Medium,  10"
 
