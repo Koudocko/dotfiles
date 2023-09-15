@@ -33,6 +33,7 @@ window#waybar {
 }
 
 #pulseaudio,
+#wireplumber,
 #backlight,
 #network,
 #cpu,
@@ -71,13 +72,18 @@ window#waybar {
     border-radius: 10px;
 }
 
-#pulseaudio {
+#wireplumber {
     /* color: #F77B7B; */
     color: #7BaBf7;
     border-left-style: solid;
     border-left-width: 3px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+#pulseaudio {
+    /* color: #F77B7B; */
+    color: #7BaBf7;
 }
 
 #backlight {
