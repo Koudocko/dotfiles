@@ -53,5 +53,7 @@ return require('packer').startup(function(use)
 
   use('lewis6991/gitsigns.nvim')
 
-  use ('andweeb/presence.nvim')
+  use('andweeb/presence.nvim')
+
+  use("lukas-reineke/indent-blankline.nvim")
 end)
