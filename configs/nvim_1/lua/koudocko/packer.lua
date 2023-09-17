@@ -26,17 +26,18 @@ return require('packer').startup(function(use)
       {'neovim/nvim-lspconfig'},             -- Required
       {'williamboman/mason.nvim'},           -- Optional
       {'williamboman/mason-lspconfig.nvim'}, -- Optional
-  
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},     -- Required
       {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'hrsh7th/cmp-path'}, -- Required
+      {'hrsh7th/cmp-buffer'}, -- Required
       {'L3MON4D3/LuaSnip'},     -- Required
+      {'saadparwaiz1/cmp_luasnip'},
+      {'simrat39/rust-tools.nvim'}
     }
   }
 
   use('tpope/vim-commentary')
-
-  -- use('ap/vim-css-color')
 
   use('jiangmiao/auto-pairs')
 
@@ -52,4 +53,5 @@ return require('packer').startup(function(use)
 
   use('lewis6991/gitsigns.nvim')
 
+  use ('andweeb/presence.nvim')
 end)

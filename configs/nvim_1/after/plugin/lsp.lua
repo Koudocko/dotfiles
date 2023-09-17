@@ -16,31 +16,15 @@ lsp.ensure_installed({
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
 
-
-local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
-local cmp_mappings = lsp.defaults.cmp_mappings({
-  ['<C-e>'] = cmp.mapping.abort(),
-  ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
-  ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<ENTER>'] = cmp.mapping.confirm({ select = true }),
-})
-
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
-
-lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
-})
-
 lsp.set_preferences({
     suggest_lsp_servers = false,
-    sign_icons = {
-        error = '',
-        warn = '',
-        hint = '',
-        info = ''
-    },
+})
+
+lsp.set_sign_icons({
+  error = '',
+  warn = '',
+  hint = '',
+  info = ''
 })
 
 lsp.on_attach(function(client, bufnr)
@@ -56,6 +40,12 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+lsp.skip_server_setup({'rust_analyzer'})
+
+local rust_tools = require('rust-tools')
+
+rust_tools.setup()
 
 vim.diagnostic.config({
     virtual_text = true
