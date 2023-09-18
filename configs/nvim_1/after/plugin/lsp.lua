@@ -21,9 +21,9 @@ lsp.set_preferences({
 })
 
 lsp.set_sign_icons({
-  error = '',
+  error = '',
   warn = '',
-  hint = '',
+  hint = '',
   info = ''
 })
 
@@ -50,3 +50,4 @@ rust_tools.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
