@@ -6,6 +6,9 @@ mouse_bindings:
 mouse:
   hide_when_typing: true
 
+key_bindings:
+    - { key: M, mods: Control, chars: "pfind \x0D" }
+
 font:
   size:
     12.0

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-[ -z "$TMUX" ] && { tmux attach || tmux new-session; }
+[ -z "$TMUX" ] && { tmux attach -s main || tmux new-session -s main; }

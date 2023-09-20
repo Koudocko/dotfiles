@@ -1,0 +1,25 @@
+#!/bin/bash
+
+dirs=("$HOME/Documents/work" "$HOME/Documents/school" "$HOME/Documents/personal")
+
+SESSION_DIR=$(for dir in "${dirs[@]}"; do
+  mkdir -p $dir
+  find "$dir" -maxdepth 1 -type d
+done | fzf)
+
+if [ -n "$SESSION_DIR" ]; then
+  SESSION_NAME=(${SESSION_DIR//\// })
+
+  if [ -z "$TMUX" ]; then
+    tmux attach -t ${SESSION_NAME[-1]} \
+      > /dev/null 2>&1 \
+      || tmux new-session -s ${SESSION_NAME[-1]} -c $SESSION_DIR \
+      > /dev/null 2>&1 
+  else
+    tmux switch -t ${SESSION_NAME[-1]} \
+      > /dev/null 2>&1 \
+      || { tmux new-session -d -s ${SESSION_NAME[-1]} -c $SESSION_DIR \
+        > /dev/null 2>&1 \
+        && tmux switch -t ${SESSION_NAME[-1]}; }
+  fi
+fi
