@@ -1,5 +1,4 @@
-# Start X at login
-if status --is-login
+if status is-interactive
   if test -z "$DISPLAY"
     if test $XDG_VTNR -eq 1
       set -x MOZ_ENABLE_WAYLAND 1
@@ -8,9 +7,7 @@ if status --is-login
       exec startx
     end
   end
-end
 
-if status is-interactive
   xmodmap -e "pointer = 1 2 3" > /dev/null 2>&1
 
   function fish_prompt 

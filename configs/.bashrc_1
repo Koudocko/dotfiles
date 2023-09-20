@@ -1,3 +1,4 @@
+
 [[ $- != *i* ]] && return
 PS1='[\W] > '
 
@@ -50,3 +51,9 @@ alias vidsave='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/be
 
 bind -x '"\C-s":"tfind"'
 bind -x '"\C-y":"pfind"'
+
+if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
+then
+	shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=''
+	exec fish $LOGIN_OPTION
+fi
