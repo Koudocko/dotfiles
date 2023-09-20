@@ -1,11 +1,11 @@
 # Start X at login
-if status is-login
-  if test -z "$DISPLAY" -a
-    if $XDG_VTNR = 1
-      exec startx
-    else if $XDG_VTNR = 2
+if status --is-login
+  if test -z "$DISPLAY"
+    if test $XDG_VTNR -eq 1
       set -x MOZ_ENABLE_WAYLAND 1
       exec Hyprland
+    else if test $XDG_VTNR -eq 2
+      exec startx
     end
   end
 end
