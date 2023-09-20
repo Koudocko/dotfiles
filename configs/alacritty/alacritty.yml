@@ -8,7 +8,7 @@ mouse:
 
 key_bindings:
     - { key: M, mods: Control, chars: "pfind \x0D" }
-    - { key: T, mods: Control, chars: "tfind \x0D" }
+    - { key: S, mods: Control, chars: "tfind \x0D" }
 
 font:
   size:
