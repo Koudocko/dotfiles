@@ -1,0 +1,17 @@
+#!/bin/bash
+
+SESSIONS=""
+
+while read -r line; do
+    SESSIONS+="${line%%:*}\n"
+done < <(tmux ls 2> /dev/null)
+
+SESSION_NAME=`echo -e $SESSIONS | fzf`
+
+if [ -n "$SESSION_NAME" ]; then
+  if [ -z "$TMUX" ]; then
+    tmux attach -t $SESSION_NAME > /dev/null 2>&1
+  else
+    tmux switch -t $SESSION_NAME > /dev/null 2>&1
+  fi
+fi
