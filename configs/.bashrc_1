@@ -47,3 +47,6 @@ alias neo='neofetch'
 alias syspo='systemctl poweroff'
 alias sysrb='systemctl reboot'
 alias vidsave='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
+
+bind -x '"\C-s":"tfind"'
+bind -x '"\C-y":"pfind"'

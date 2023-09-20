@@ -61,4 +61,7 @@ if status is-interactive
   alias sysrb 'systemctl reboot'
   alias nnn 'nnn -Read'
   alias vidsave 'yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
+
+  bind \cs 'tfind'
+  bind \cy 'pfind'
 end
