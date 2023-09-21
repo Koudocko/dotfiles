@@ -39,6 +39,9 @@ window {
     background-color: @background;
     border:           1;
     padding:          5;
+    width: 15%;
+    height: 30%;
+    location: north west;
 }
 mainbox {
     border:  0;
@@ -62,7 +65,7 @@ listview {
 }
 element {
     border:  0;
-    padding: 1px ;
+    padding: 2px ;
 }
 element-text {
     background-color: inherit;
@@ -130,6 +133,7 @@ case-indicator {
 }
 entry {
     spacing:    0;
+    placeholder: "";
     text-color: @normal-foreground;
 }
 prompt {
@@ -137,11 +141,11 @@ prompt {
     text-color: @normal-foreground;
 }
 inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    children:   [ textbox-prompt-colon,entry ];
 }
 textbox-prompt-colon {
     expand:     false;
-    str:        ":";
+    str:        "->";
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
