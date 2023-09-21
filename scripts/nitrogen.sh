@@ -18,6 +18,6 @@ icon_caps=false
 dirs=$HOME/Pictures/Wallpapers;" > "$HOME/.config/nitrogen/nitrogen.cfg"
 
 echo "[xin_-1]
-file=$HOME/Pictures/Wallpapers/ArchWallpaper0.png
+file=$HOME/Pictures/Wallpapers/ZeldaWallpaper0.jpg
 mode=0
 bgcolor=#000000" > "$HOME/.config/nitrogen/bg-saved.cfg"

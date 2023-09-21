@@ -12,7 +12,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrains Mono 9
+font pango:JetBrains Mono Medium 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -34,7 +34,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Launch polybar on i3-restart
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Audio controls
 bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+
@@ -53,8 +53,8 @@ bindsym XF86MonBrightnessDown exec light -U 5
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec WINIT_X14_SCALE_FACTOR=1 alacritty -e tmux-spawn
-bindsym $mod+Return exec WINIT_X14_SCALE_FACTOR=1 alacritty 
+bindsym $mod+Shift+Return exec alacritty -e tmux-spawn
+bindsym $mod+Return exec alacritty 
 
 # kill focused window
 bindsym $mod+q kill
@@ -101,7 +101,6 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -112,10 +111,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+p focus parent
+bindsym $mod+Shift+p focus parent
 
 # focus the child container
-bindsym $mod+o focus child
+bindsym $mod+p focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -184,27 +183,27 @@ bindsym $mod+Shift+e exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+  # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym j resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+  # Pressing left will shrink the window’s width.
+  # Pressing right will grow the window’s width.
+  # Pressing up will shrink the window’s height.
+  # Pressing down will grow the window’s height.
+  bindsym h resize shrink width 10 px or 10 ppt
+  bindsym k resize grow height 10 px or 10 ppt
+  bindsym j resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+  # same bindings, but for the arrow keys
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+  # back to normal: Enter or Escape or $mod+r
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -223,15 +222,25 @@ bindsym $mod+Shift+i exec "i3lock -c 000000"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#}
+bar {
+  status_command i3status
+
+  colors{
+    focused_workspace  #807Bf7 #807Bf7 #1E2127
+    active_workspace   #1E2127 #1E2127 #D1C2E9
+    inactive_workspace #1E2127 #1E2127 #D1C2E9
+    urgent_workspace   #1E2127 #F77B7B #F77B7B
+    statusline #D1C2E9
+    background #1E2127 
+    separator #807Bf7 
+  }
+}
 
 client.focused #807bf7 #807bf7 #1E2127 #807bf7 
 client.focused_inactive #807bf7 #807bf7 #1E2127 #807bf7 
 # client.focused_inactive #1E2127 #1E2127 #C5C8C6 #1E2127 
 client.unfocused #1E2127 #1E2127 #C5C8C6 #1E2127 
-client.urgent #A54242 #A542422 #1E212 #A54242 
+client.urgent #F77B7B #F77B7B2 #1E212 #F77B7B 
 for_window [class=".*"] border pixel 1
-gaps inner 5
-gaps outer 5
+# gaps inner 5
+# gaps outer 5
