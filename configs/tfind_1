@@ -3,11 +3,12 @@
 SESSIONS=""
 
 while read -r line; do
-    SESSIONS+="${line%%:*}\n"
+    SESSIONS+="$line\n"
 done < <(tmux ls 2> /dev/null)
 
 SESSIONS=`echo $SESSIONS | sed 's/..$//'`
 SESSION_NAME=`echo -e $SESSIONS | fzf`
+SESSION_NAME="${SESSION_NAME%%:*}"
 
 if [ -n "$SESSION_NAME" ]; then
   if [ -z "$TMUX" ]; then
