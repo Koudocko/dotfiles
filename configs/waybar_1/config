@@ -31,7 +31,7 @@
         // "format-bluetooth-muted": " {icon} {format_source}",
         // "format-muted": " {format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source-muted": "{volume}% ",
         // "format-icons": {
         //     "headphone": "",
         //     "hands-free": "",
@@ -45,7 +45,7 @@
     },
     "wireplumber": {
         "format": "{volume}% ",
-        "format-muted": " ",
+        "format-muted": "{volume}%  ",
         "tooltip": false
     },
     "backlight": {
@@ -76,8 +76,8 @@
     },
     "disk": {
         "interval": 30,
-        "format": "{percentage_free}% ",
-        "format-alt": "{free} ",
+        "format": "{percentage_free}% ",
+        "format-alt": "{free} ",
         "tooltip": false
     },
     "temperature": {
@@ -107,8 +107,8 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "{:%Y-%m-%d}",
-        "format-alt": "{:%I:%M %p}",
+        "format": "{:%Y-%m-%d} ",
+        "format-alt": "{:%I:%M %p} ",
         "tooltip": false
     },
     "tray": {
@@ -116,3 +116,4 @@
         "spacing": 10,
     },
 }
+
