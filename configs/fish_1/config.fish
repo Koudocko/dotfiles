@@ -54,6 +54,7 @@ if status is-interactive
 
   alias cl 'clear'
   alias neo 'neofetch'
+  alias uwu='uwufetch'
   alias syspo 'systemctl poweroff'
   alias sysrb 'systemctl reboot'
   alias nnn 'nnn -Read'
