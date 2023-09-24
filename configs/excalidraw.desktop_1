@@ -2,7 +2,7 @@
 Name=Excalidraw
 Comment=Whiteboard program
 Exec=chromium --app=https://excalidraw.com/
-Icon=chromium
+Icon=excalidraw
 Type=Application
 Categories=Network;WebBrowser;
 Terminal=false
