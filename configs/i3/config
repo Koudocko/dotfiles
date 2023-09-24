@@ -162,6 +162,8 @@ assign [class="osu!"] $ws5
 assign [class="mpv"] $ws6
 assign [class="obs"] $ws6
 assign [class="Sxiv"] $ws6
+assign [class="excalidraw"] $ws8
+assign [class="Gimp-2.10"] $ws8
 
 for_window [class=Alacritty] focus 
 for_window [class=firefox] focus 
@@ -172,6 +174,8 @@ for_window [class=mpv] focus
 for_window [class=obs] focus 
 for_window [class=Sxiv] focus 
 for_window [class=osu!] focus 
+for_window [class=excalidraw] focus 
+for_window [class=Gimp-2.10] focus 
 
 # reload the configuration file
 bindsym $mod+c reload
