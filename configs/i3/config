@@ -164,6 +164,7 @@ assign [class="obs"] $ws6
 assign [class="Sxiv"] $ws6
 assign [class="excalidraw"] $ws8
 assign [class="Gimp-2.10"] $ws8
+assign [class="Qemu-system-x86_64"] $ws9
 
 for_window [class=Alacritty] focus 
 for_window [class=firefox] focus 
@@ -176,6 +177,7 @@ for_window [class=Sxiv] focus
 for_window [class=osu!] focus 
 for_window [class=excalidraw] focus 
 for_window [class=Gimp-2.10] focus 
+for_window [class=Qemu-system-x86_64] focus 
 
 # reload the configuration file
 bindsym $mod+c reload
@@ -253,3 +255,4 @@ client.urgent #F77B7B #F77B7B #1E2127 #F77B7B
 for_window [class=".*"] border pixel 1
 # gaps inner 5
 # gaps outer 5
+
