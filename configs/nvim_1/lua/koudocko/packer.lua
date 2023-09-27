@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
       {'hrsh7th/cmp-buffer'}, -- Required
       {'L3MON4D3/LuaSnip'},     -- Required
       {'saadparwaiz1/cmp_luasnip'},
+		  {'rafamadriz/friendly-snippets'},
       {'simrat39/rust-tools.nvim'}
     }
   }

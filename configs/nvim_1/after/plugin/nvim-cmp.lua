@@ -1,9 +1,15 @@
-local cmp = require('cmp')
+local status_ok, cmp = pcall(require, "cmp")
+if not status_ok then
+  return
+end
+
 local cmp_select_opts = {behavior = cmp.SelectBehavior.Select}
+require('luasnip.loaders.from_vscode').lazy_load()
 
 cmp.setup({
   sources = {
-    {name = 'nvim_lsp'},
+    { name = 'luasnip' },
+    { name = 'nvim_lsp' },
   },
   mapping = {
     ['<ENTER>'] = cmp.mapping.confirm({ select = true }),
