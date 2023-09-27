@@ -62,4 +62,5 @@ if status is-interactive
 
   bind \cs 'tfind'
   bind \cy 'pfind'
+  bind \co 'nvim .'
 end
