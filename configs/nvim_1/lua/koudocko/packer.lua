@@ -55,5 +55,9 @@ return require('packer').startup(function(use)
 
   use('andweeb/presence.nvim')
 
-  use("lukas-reineke/indent-blankline.nvim")
+  use('lukas-reineke/indent-blankline.nvim')
+
+  use('lvimuser/lsp-inlayhints.nvim')
+
+  use('folke/trouble.nvim')
 end)
