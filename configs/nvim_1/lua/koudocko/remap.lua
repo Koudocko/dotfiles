@@ -18,6 +18,8 @@ vim.keymap.set("n", "<leader>z", [[:s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><L
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("n", "U", "<C-R>")
 vim.keymap.set("n", "<BS>", "O<Esc>")
+vim.keymap.set("n", "<C-l>", "O<Esc>")
+vim.keymap.set("n", "<leader>r", "<C-l>")
 vim.keymap.set("n", "<CR>", "o<Esc>")
 vim.keymap.set("n", "<C-q>", vim.cmd.Ex)
 vim.keymap.set("n", "<C-w>e", ":edit .<cr>", { silent = true })
