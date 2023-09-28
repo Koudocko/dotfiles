@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Youtube Music
-Comment=Youtube music player
-Exec=chromium --app=https://music.youtube.com/
-Icon=youtubemusic
-Type=Application
-Categories=Network;WebBrowser;
-Terminal=false
-StartupWMClass=excalidraw
