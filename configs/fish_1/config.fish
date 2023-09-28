@@ -44,7 +44,6 @@ if status is-interactive
 
   set -U fish_greeting
   set -x PATH "$HOME/.cargo/bin" $PATH
-  set -x DOTDIR ~/Documents/dotfiles
   set -x FZF_DEFAULT_COMMAND "find"
   set -x EDITOR nvim
   set -x NNN_BMS 'b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos'
@@ -57,10 +56,10 @@ if status is-interactive
   alias uwu='uwufetch'
   alias syspo 'systemctl poweroff'
   alias sysrb 'systemctl reboot'
-  alias nnn 'nnn -Read'
   alias vidsave 'yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
 
   bind \cs 'tfind'
   bind \cy 'pfind'
   bind \co 'nvim .'
+  bind \cv 'n'
 end

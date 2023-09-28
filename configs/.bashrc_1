@@ -31,10 +31,7 @@ function vidtrim(){
 }
 
 export PATH="$HOME/.cargo/bin:$PATH"
-
-export DOTDIR=~/Documents/dotfiles
 export FZF_DEFAULT_COMMAND="find"
-
 export EDITOR=nvim
 export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos'
 export NNN_PLUG='f:fzcd;o:fzopen;p:preview-tui;i:imgview'
@@ -42,7 +39,6 @@ export NNN_FCOLORS='696969696969696969696969'
 export NNN_COLORS='#6969696969'
 
 alias ls='ls --color=auto'
-alias nnn='nnn -Read'
 alias cl='clear'
 alias neo='neofetch'
 alias uwu='uwufetch'
@@ -53,6 +49,7 @@ alias vidsave='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/be
 bind -x '"\C-s":"tfind"'
 bind -x '"\C-y":"pfind"'
 bind -x '"\C-o":"nvim ."'
+bind -x '"\C-v":"n"'
 
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
 then
