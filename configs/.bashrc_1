@@ -49,7 +49,7 @@ alias vidsave='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/be
 bind -x '"\C-s":"tfind"'
 bind -x '"\C-y":"pfind"'
 bind -x '"\C-o":"nvim ."'
-bind -x '"\C-v":"n"'
+bind -x '"\C-g":"n"'
 
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
 then
