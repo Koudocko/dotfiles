@@ -3,7 +3,7 @@
 		"width": 1898,
 		"height": 1130
 	},
-	"url": "https://music.youtube.com/watch?v=TDi-hGRYX6g&list=RDAMVMeYAd4uDotF0&index=0",
+	"url": "https://music.youtube.com/watch?v=9lVPAWLWtWc&list=RDAMVMeYAd4uDotF0&index=0",
 	"options": {
 		"tray": true,
 		"appVisible": true,
@@ -30,8 +30,13 @@
 			"additionalBlockLists": []
 		},
 		"shortcuts": {
-			"enabled": false,
-			"overrideMediaKeys": false
+			"enabled": true,
+			"overrideMediaKeys": false,
+			"global": {
+				"previous": "Super+K",
+				"playPause": "Super+P",
+				"next": "Super+J"
+			}
 		},
 		"downloader": {
 			"enabled": true,
