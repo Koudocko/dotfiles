@@ -62,4 +62,5 @@ if status is-interactive
   bind \cy 'pfind'
   bind \co 'nvim .'
   bind \cg 'n'
+  bind \cg 'n; commandline -f repaint'
 end
