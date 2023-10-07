@@ -53,7 +53,7 @@ if status is-interactive
 
   alias cl 'clear'
   alias neo 'neofetch'
-  alias uwu='uwufetch'
+  alias uwu 'uwufetch'
   alias syspo 'systemctl poweroff'
   alias sysrb 'systemctl reboot'
   alias vidsave 'yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
@@ -63,6 +63,4 @@ if status is-interactive
   bind \co 'nvim .'
   bind \cg 'n'
   bind \cg 'n; commandline -f repaint'
-  bind \ck 'up-or-search'
-  bind \cj 'down-or-search'
 end

@@ -50,8 +50,6 @@ bind -x '"\C-s":"tfind"'
 bind -x '"\C-y":"pfind"'
 bind -x '"\C-o":"nvim ."'
 bind -x '"\C-g":"n"'
-bind '"\C-k": history-search-backward'
-bind '"\C-j": history-search-forward'
 
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
 then
