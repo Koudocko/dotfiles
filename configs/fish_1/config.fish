@@ -63,4 +63,6 @@ if status is-interactive
   bind \co 'nvim .'
   bind \cg 'n'
   bind \cg 'n; commandline -f repaint'
+  bind \ck 'up-or-search'
+  bind \cj 'down-or-search'
 end
