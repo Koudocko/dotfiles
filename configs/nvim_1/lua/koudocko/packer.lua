@@ -12,9 +12,9 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   })
 
-  use('marko-cerovac/material.nvim')
-  use('EdenEast/nightfox.nvim')
   use('folke/tokyonight.nvim')
+  use('Mofiqul/dracula.nvim')
+  use('navarasu/onedark.nvim')
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
