@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+  if pgrep waybar; then
+    killall waybar
+  else
+    waybar &
+  fi
+else
+  if pgrep i3bar; then
+    killall i3bar
+  else
+    i3bar &
+  fi
+fi
