@@ -38,9 +38,12 @@ return require('packer').startup(function(use)
     }
   }
 
-  use('tpope/vim-commentary')
+  use {
+    "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
 
-  use('jiangmiao/auto-pairs')
+  use('tpope/vim-commentary')
 
   use('lambdalisue/suda.vim')
 
