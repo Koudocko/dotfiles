@@ -3,11 +3,11 @@
 		"width": 1898,
 		"height": 1130
 	},
-	"url": "https://music.youtube.com/watch?v=9lVPAWLWtWc&list=RDAMVMeYAd4uDotF0&index=0",
+	"url": "https://music.youtube.com/watch?v=FNG8O6Ibd9o&list=PLYc_8cg4kfhom03TW-aOIeCePeiaFGAI3&index=0",
 	"options": {
 		"tray": true,
 		"appVisible": true,
-		"autoUpdates": true,
+		"autoUpdates": false,
 		"hideMenu": false,
 		"startAtLogin": false,
 		"disableHardwareAcceleration": false,
@@ -57,7 +57,8 @@
 			"activityTimoutEnabled": true,
 			"activityTimoutTime": 600000,
 			"listenAlong": false,
-			"hideDurationLeft": false
+			"hideDurationLeft": false,
+			"hideGitHubButton": true
 		},
 		"notifications": {
 			"enabled": false,
@@ -208,7 +209,7 @@
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "1.20.0"
+			"version": "2.0.4"
 		}
 	},
 	"window-maximized": false,
