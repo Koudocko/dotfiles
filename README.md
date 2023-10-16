@@ -8,7 +8,8 @@
 **Dual Configuration:**
 I two system GUI configurations present.
 
-<h1 align="center"> <img src="examples/WaylandExample.png" alt="wayland"></h1> 
+<h1 align="center"> <img src="examples/WaylandExample0.png" alt="wayland"></h1> 
+<h1 align="center"> <img src="examples/WaylandExample1.png" alt="wayland"></h1> 
 
 1. Hyprland (Wayland)
 - Boot is available on tty1
@@ -18,7 +19,8 @@ I two system GUI configurations present.
 - grim + swappy (screenshot utility) 
 TLDR: Provides a clean and fluid experience.  
 
-<h1 align="center"> <img src="examples/X11Example.png" alt="X11"></h1> 
+<h1 align="center"> <img src="examples/X11Example0.png" alt="X11"></h1> 
+<h1 align="center"> <img src="examples/X11Example1.png" alt="X11"></h1> 
 
 2. i3 (X11)
 - Boot is available on tty2
