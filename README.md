@@ -6,24 +6,26 @@
 3. Run "alps -Sg dotfiles"
 
 **Dual Configuration:**
-I two system GUI configurations present.  
+I two system GUI configurations present.
 
-<h1 align="center"> <img src="examples/WaylandExample.png" alt="Wayland"></h1>
-1. Hyprland (Wayland)  
-- Boot is available on tty1.  
-- wofi (application launcher)  
-- waybar (status bar)  
-- hyprpaper (wallpaper utility)  
-- grim + swappy (screenshot utility)  
+<h1 align="center"> <img src="examples/WaylandExample.png" alt="wayland"></h1> 
+
+1. Hyprland (Wayland)
+- Boot is available on tty1.
+- wofi (application launcher)
+- waybar (status bar)
+- hyprpaper (wallpaper utility)
+- grim + swappy (screenshot utility) 
 TLDR: Provides a clean and fluid experience.  
 
-<h1 align="center"> <img src="examples/X11Example.png" alt="X11"></h1>
-2. i3 (X11)  
-- Boot is available on tty2  
-- rofi (application launcher)  
-- i3status (status bar)  
-- feh (wallpaper utility)  
-- flameshot (screenshot utility)  
+<h1 align="center"> <img src="examples/X11Example.png" alt="X11"></h1> 
+
+2. i3 (X11)
+- Boot is available on tty2
+- rofi (application launcher)
+- i3status (status bar)
+- feh (wallpaper utility)
+- flameshot (screenshot utility)
 TlDR: Provides a minimal and functional experience.  
 
 **Other Notable Features:**
@@ -41,9 +43,9 @@ EasyEffects is enabled, but the profile is not loaded. The Linux-Solid profile i
 <Alt + H, J, K, L> => Move window left, down, up, and right respectively  
 <Alt + q> => Close active window  
 <Win + S> => Open screenshot utility  
-<Alt + n> => Toggle status bar  
+<Alt + n> => Toggle status bar
 
-*For a complete set of keybinds, please see the corresponding configuration file for the application...*  
+*For a complete set of keybinds, please see the corresponding configuration file for the application...*
 
 **WARNING:** These dotfiles are designed for a clean system install. Meaning some root files will be edited  
 If you wish to remove these entries, run:
