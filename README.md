@@ -5,7 +5,7 @@
 2. Clone this repo into ~/.config/alps
 3. Run "alps -Sg dotfiles"
 
-**Dual Configuration:**
+**Dual Configuration:**  
 Two graphical interface configurations are available.
 
 <h1 align="center"> <img src="examples/WaylandExample0.png" alt="wayland"></h1> 
@@ -30,11 +30,11 @@ TLDR: Provides a clean and fluid experience.
 - flameshot (screenshot utility)
 TlDR: Provides a minimal and functional experience.  
 
-**Other Notable Features:**
+**Other Notable Features:**  
 The Fcitx IMF is enabled and shipped with the Mozc IME. Ctrl + Space to toggle between en_US and ja_JP.  
 EasyEffects is enabled, but the profile is not loaded. The Linux-Solid profile is available to enhance audio quality.  
 
-**General Use Guide:**
+**General Use Guide:**  
 *These keybinds are standard across both Wayland and X11 sessions.  
 
 <Alt + Enter> => Open Alacritty terminal emulator  
