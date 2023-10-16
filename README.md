@@ -11,24 +11,22 @@ Two graphical interface configurations are available.
 <h1 align="center"> <img src="examples/WaylandExample0.png" alt="wayland"></h1> 
 <h1 align="center"> <img src="examples/WaylandExample1.png" alt="wayland"></h1> 
 
-1. Hyprland (Wayland)
+1. Hyprland (Wayland) : Provides a clean and fluid experience
 - Boot is available on tty1
 - wofi (application launcher)
 - waybar (status bar)
 - hyprpaper (wallpaper utility)
-- grim + swappy (screenshot utility)  
-TLDR: Provides a clean and fluid experience.  
+- grim + swappy (screenshot utility)
 
 <h1 align="center"> <img src="examples/X11Example0.png" alt="X11"></h1> 
 <h1 align="center"> <img src="examples/X11Example1.png" alt="X11"></h1> 
 
-2. i3 (X11)
+2. i3 (X11) : Provides a minimal and functional experience
 - Boot is available on tty2
 - rofi (application launcher)
 - i3status (status bar)
 - feh (wallpaper utility)
-- flameshot (screenshot utility)  
-TLDR: Provides a minimal and functional experience.  
+- flameshot (screenshot utility)
 
 **Other Notable Features:**  
 The Fcitx IMF is enabled and shipped with the Mozc IME. Ctrl + Space to toggle between en_US and ja_JP.  
