@@ -16,7 +16,7 @@ Two graphical interface configurations are available.
 - wofi (application launcher)
 - waybar (status bar)
 - hyprpaper (wallpaper utility)
-- grim + swappy (screenshot utility) 
+- grim + swappy (screenshot utility)  
 TLDR: Provides a clean and fluid experience.  
 
 <h1 align="center"> <img src="examples/X11Example0.png" alt="X11"></h1> 
@@ -27,8 +27,8 @@ TLDR: Provides a clean and fluid experience.
 - rofi (application launcher)
 - i3status (status bar)
 - feh (wallpaper utility)
-- flameshot (screenshot utility)
-TlDR: Provides a minimal and functional experience.  
+- flameshot (screenshot utility)  
+TLDR: Provides a minimal and functional experience.  
 
 **Other Notable Features:**  
 The Fcitx IMF is enabled and shipped with the Mozc IME. Ctrl + Space to toggle between en_US and ja_JP.  
