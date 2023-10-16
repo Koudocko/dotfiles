@@ -50,8 +50,7 @@ fi
 
 setxkbmap -option compose:ralt
 
-nitrogen --restore &
+~/.fehbg &
 easyeffects --gapplication-service &
-# picom &
 fcitx -d &
 exec i3
