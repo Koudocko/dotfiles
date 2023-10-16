@@ -11,7 +11,7 @@ I two system GUI configurations present.
 <h1 align="center"> <img src="examples/WaylandExample.png" alt="wayland"></h1> 
 
 1. Hyprland (Wayland)
-- Boot is available on tty1.
+- Boot is available on tty1
 - wofi (application launcher)
 - waybar (status bar)
 - hyprpaper (wallpaper utility)
