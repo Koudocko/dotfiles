@@ -6,7 +6,7 @@
 3. Run "alps -Sg dotfiles"
 
 **Dual Configuration:**
-I two system GUI configurations present.
+Two graphical interface configurations are available.
 
 <h1 align="center"> <img src="examples/WaylandExample0.png" alt="wayland"></h1> 
 <h1 align="center"> <img src="examples/WaylandExample1.png" alt="wayland"></h1> 
