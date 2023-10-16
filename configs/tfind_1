@@ -1,5 +1,6 @@
 #!/bin/bash
 
+dirs=("work/" "school/" "personal/")
 SESSIONS=""
 
 while read -r line; do
@@ -9,6 +10,18 @@ done < <(tmux ls 2> /dev/null)
 SESSIONS=`echo $SESSIONS | sed 's/..$//'`
 SESSION_NAME=`echo -e $SESSIONS | fzf`
 SESSION_NAME="${SESSION_NAME%%:*}"
+
+for dir in "${dirs[@]}"; do
+  if [[ $SESSION_NAME == "$dir"* ]]; then
+    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+      hyprctl dispatch movetoworkspace 4 > /dev/null 2>&1
+    else
+      i3-msg move container to workspace 4 > /dev/null 2>&1
+      i3-msg workspace 4 > /dev/null 2>&1
+    fi
+    break 
+  fi
+done
 
 if [ -n "$SESSION_NAME" ]; then
   if [ -z "$TMUX" ]; then

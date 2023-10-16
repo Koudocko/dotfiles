@@ -4,23 +4,31 @@ dirs=("$HOME/Documents/work" "$HOME/Documents/school" "$HOME/Documents/personal"
 
 SESSION_DIR=$(for dir in "${dirs[@]}"; do
   mkdir -p "$dir"
-  find "$dir" -maxdepth 1 -type d
+  find "$dir" -maxdepth 1 -mindepth 1 -type d
 done | fzf)
 
 if [ -n "$SESSION_DIR" ]; then
   SESSION_NAME=(${SESSION_DIR//\// })
+  SESSION_NAME="${SESSION_NAME[-2]}/${SESSION_NAME[-1]}"
+
+  if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    hyprctl dispatch movetoworkspace 4 > /dev/null 2>&1
+  else
+    i3-msg move container to workspace 4 > /dev/null 2>&1
+    i3-msg workspace 4 > /dev/null 2>&1
+  fi
 
   if [ -z "$TMUX" ]; then
-    tmux attach -t "${SESSION_NAME[-1]}" > /dev/null 2>&1 || {
-      tmux new-session -s "${SESSION_NAME[-1]}" -c "$SESSION_DIR" -d > /dev/null 2>&1
-      tmux send-keys -t "${SESSION_NAME[-1]}" 'nvim .' C-m
-      tmux attach -t "${SESSION_NAME[-1]}" > /dev/null 2>&1
+    tmux attach -t $SESSION_NAME > /dev/null 2>&1 || {
+      tmux new-session -s $SESSION_NAME -c "$SESSION_DIR" -d > /dev/null 2>&1
+      tmux send-keys -t $SESSION_NAME 'nvim .' C-m
+      tmux attach -t $SESSION_NAME > /dev/null 2>&1
     }
   else
-    tmux switch -t "${SESSION_NAME[-1]}" > /dev/null 2>&1 || {
-      tmux new-session -d -s "${SESSION_NAME[-1]}" -c "$SESSION_DIR" > /dev/null 2>&1
-      tmux send-keys -t "${SESSION_NAME[-1]}" 'nvim .' C-m
-      tmux switch -t "${SESSION_NAME[-1]}"
+    tmux switch -t $SESSION_NAME > /dev/null 2>&1 || {
+      tmux new-session -d -s $SESSION_NAME -c "$SESSION_DIR" > /dev/null 2>&1
+      tmux send-keys -t $SESSION_NAME 'nvim .' C-m
+      tmux switch -t $SESSION_NAME
     }
   fi
 fi
