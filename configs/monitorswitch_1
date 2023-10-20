@@ -1,0 +1,69 @@
+##!/bin/bash
+
+#output=$(xrandr --listmonitors)
+
+#MONITOR_COUNT=$(echo "$output" | awk '/Monitors:/ {print $2}')
+
+#if [ "$#" -ne 2 ]; then
+#    exit 1
+#fi
+
+#monitor_id="$1"
+
+#while IFS= read -r line; do
+#    id=$(echo "$line" | awk -F': ' '{print $1}')
+#    name=$(echo "$line" | awk '{print $NF}')
+
+#    if [ "$id" -eq "$monitor_id" ]; then
+#      if [[ "$2" == "move" ]]; then
+#        i3-msg "move workspace to output $name" > /dev/null 2>&1
+#      elif [[ "$2" == "focus" ]]; then
+#        i3-msg "focus output $name" > /dev/null 2>&1
+#      fi
+
+#      exit 0
+#    fi
+#done < <(echo "$output" | tail -n +2)
+
+#exit 1
+
+
+#!/bin/bash
+
+output=$(xrandr --listmonitors)
+
+MONITOR_COUNT=$(awk '/Monitors:/ {print $2}' <<< "$output")
+
+if [ "$#" -ne 2 ]; then
+    exit 1
+fi
+
+monitor_id="$1"
+action="$2"
+
+# Set a global exec setting to suppress i3-msg errors (add this to your i3 config)
+# exec --no-startup-id i3-msg 'focus output none'
+
+while IFS= read -r line; do
+    line=($line)
+    id=${line[0]%%:*}
+    name=${line[-1]}
+
+    if [ "$id" -eq "$monitor_id" ]; then
+        case "$action" in
+            "move")
+                i3-msg "move workspace to output $name"
+                ;;
+            "focus")
+                i3-msg "focus output $name"
+                ;;
+            *)
+                exit 1
+                ;;
+        esac
+
+        exit 0
+    fi
+done < <(tail -n +2 <<< "$output")
+
+exit 1
