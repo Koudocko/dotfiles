@@ -246,20 +246,20 @@ bar {
   status_command i3status
 
   colors{
-    focused_workspace  #807Bf7 #807Bf7 #1E2127
-    active_workspace   #1E2127 #1E2127 #D1C2E9
-    inactive_workspace #1E2127 #1E2127 #D1C2E9
-    urgent_workspace   #1E2127 #F77B7B #F77B7B
+    focused_workspace  #807Bf7 #807Bf7 #000000
+    active_workspace   #000000 #000000 #D1C2E9
+    inactive_workspace #000000 #000000 #D1C2E9
+    urgent_workspace   #000000 #F77B7B #F77B7B
     statusline #D1C2E9
-    background #1E2127 
+    background #000000 
     separator #807Bf7 
   }
 }
 
-client.focused #807bf7 #807bf7 #1E2127 #807bf7 
-client.focused_inactive #807bf7 #1E2127 #D1C2E9 #1E2127 
-client.unfocused #1E2127 #1E2127 #D1C2E9 #1E2127 
-client.urgent #F77B7B #F77B7B #1E2127 #F77B7B 
+client.focused #807bf7 #807bf7 #000000 #807bf7 
+client.focused_inactive #807bf7 #000000 #D1C2E9 #000000 
+client.unfocused #000000 #000000 #D1C2E9 #000000 
+client.urgent #F77B7B #F77B7B #000000 #F77B7B 
 for_window [class=".*"] border pixel 1
 
 # Toggle between monitors
@@ -267,25 +267,25 @@ bindsym $altMod+m focus output next
 bindsym $altMod+Shift+m move workspace to output next
 
 # Monitor switch commands
-bindsym $altMod+1 exec --no-startup-id monitorswitch 0 focus
-bindsym $altMod+2 exec --no-startup-id monitorswitch 1 focus
-bindsym $altMod+3 exec --no-startup-id monitorswitch 2 focus
-bindsym $altMod+4 exec --no-startup-id monitorswitch 3 focus
-bindsym $altMod+5 exec --no-startup-id monitorswitch 4 focus
-bindsym $altMod+6 exec --no-startup-id monitorswitch 5 focus
-bindsym $altMod+7 exec --no-startup-id monitorswitch 6 focus
-bindsym $altMod+8 exec --no-startup-id monitorswitch 7 focus
-bindsym $altMod+9 exec --no-startup-id monitorswitch 8 focus
-bindsym $altMod+0 exec --no-startup-id monitorswitch 9 focus
+bindsym $altMod+1 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/0)
+bindsym $altMod+2 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/1)
+bindsym $altMod+3 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/2)
+bindsym $altMod+4 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/3)
+bindsym $altMod+5 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/4)
+bindsym $altMod+6 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/5)
+bindsym $altMod+7 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/6)
+bindsym $altMod+8 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/7)
+bindsym $altMod+9 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/8)
+bindsym $altMod+0 exec --no-startup-id i3-msg focus output $(cat /tmp/monitorswitch/9)
 
-# Monitor move commands
-bindsym $altMod+Shift+1 exec --no-startup-id monitorswitch 0 move
-bindsym $altMod+Shift+2 exec --no-startup-id monitorswitch 1 move
-bindsym $altMod+Shift+3 exec --no-startup-id monitorswitch 2 move
-bindsym $altMod+Shift+4 exec --no-startup-id monitorswitch 3 move
-bindsym $altMod+Shift+5 exec --no-startup-id monitorswitch 4 move
-bindsym $altMod+Shift+6 exec --no-startup-id monitorswitch 5 move
-bindsym $altMod+Shift+7 exec --no-startup-id monitorswitch 6 move
-bindsym $altMod+Shift+8 exec --no-startup-id monitorswitch 7 move
-bindsym $altMod+Shift+9 exec --no-startup-id monitorswitch 8 move
-bindsym $altMod+Shift+0 exec --no-startup-id monitorswitch 9 move
+# # Monitor move commands
+bindsym $altMod+Shift+1 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/0)
+bindsym $altMod+Shift+2 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/1)
+bindsym $altMod+Shift+3 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/2)
+bindsym $altMod+Shift+4 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/3)
+bindsym $altMod+Shift+5 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/4)
+bindsym $altMod+Shift+6 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/5)
+bindsym $altMod+Shift+7 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/6)
+bindsym $altMod+Shift+8 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/7)
+bindsym $altMod+Shift+9 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/8)
+bindsym $altMod+Shift+0 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/9)

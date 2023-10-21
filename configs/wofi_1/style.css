@@ -9,7 +9,7 @@
 
 window{
 	font-family: "JetBrains Mono Medium";
-	background-color: #1E2127;
+	background-color: #000000;
 	border-radius: 10px;
 }
 
@@ -30,7 +30,7 @@ window{
 }
 
 #input{
-	background-color: #1E2127;
+	background-color: #000000;
 	padding: 0.5em;
 	font-size: 1.3em;
 }

@@ -13,14 +13,13 @@ window#waybar {
 }
 
 #workspaces button {
-    background-color: #1E2127;
+    background-color: #000000;
     color: #D1C2E9;
     padding-right: 10px;
 }
 
 #workspaces button.active {
     color: #807BF7;
-
 }
 
 #workspaces button.urgent {
@@ -50,7 +49,7 @@ window#waybar {
     border-top-width: 3px;
     border-bottom-style: solid;
     border-bottom-width: 3px;
-    background-color: #1E2127;
+    background-color: #000000;
     margin-top: 8px; 
 }
 
@@ -65,7 +64,7 @@ window#waybar {
 }
 
 .modules-left > widget:first-child > #workspaces {
-    background-color: #1E2127;
+    background-color: #000000;
     border-style: solid;
     border-color: #807BF7;
     border-width: 3px;
@@ -73,7 +72,6 @@ window#waybar {
 }
 
 #wireplumber {
-    /* color: #F77B7B; */
     color: #7BaBf7;
     border-left-style: solid;
     border-left-width: 3px;
@@ -82,47 +80,38 @@ window#waybar {
 }
 
 #pulseaudio {
-    /* color: #F77B7B; */
     color: #7BaBf7;
 }
 
 #backlight {
-    /* color: #F7C17B; */
     color: #7BaBf7;
 }
 
 #network {
-    /* color: #F7F57B; */
     color: #7B85F7;
 }
 
 #cpu {
-    /* color: #9CF77B; */
     color: #7B85F7;
 }
 
 #memory {
-    /* color: #7BF79C; */
     color: #7B85F7;
 }
 
 #disk {
-    /* color: #7BC3F7; */
     color: #7B85F7;
 }
 
 #temperature {
-    /* color: #7B85F7; */
     color: #A87BF7;
 }
 
 #battery {
-    /* color: #C87BF7; */
     color: #A87BF7;
 }
 
 #clock {
-    /* color: #F77BF0; */
     color: #A87BF7;
     border-right-style: solid;
     border-right-width: 3px;
