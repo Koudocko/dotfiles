@@ -46,7 +46,7 @@ if status is-interactive
   set -x PATH "$HOME/.cargo/bin" $PATH
   set -x FZF_DEFAULT_COMMAND "find"
   set -x EDITOR nvim
-  set -x NNN_BMS 'b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos'
+  set -x NNN_BMS 'b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos;V:~/VirtualMachines;m:~/Music;a:~/.config/alps/dotfiles'
   set -x NNN_PLUG 'f:fzcd;o:fzopen;p:preview-tui;i:imgview'
   set -x NNN_FCOLORS '696969696969696969696969'
   set -x NNN_COLORS '#6969696969'
@@ -61,6 +61,5 @@ if status is-interactive
   bind \cs 'tfind'
   bind \cy 'pfind'
   bind \co 'nvim .'
-  bind \cg 'n'
   bind \cg 'n; commandline -f repaint'
 end

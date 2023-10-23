@@ -1,4 +1,3 @@
-
 [[ $- != *i* ]] && return
 PS1='[\W] > '
 
@@ -33,7 +32,7 @@ function vidtrim(){
 export PATH="$HOME/.cargo/bin:$PATH"
 export FZF_DEFAULT_COMMAND="find"
 export EDITOR=nvim
-export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos'
+export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos;V:~/VirtualMachines;m:~/Music;a:~/.config/alps/dotfiles'
 export NNN_PLUG='f:fzcd;o:fzopen;p:preview-tui;i:imgview'
 export NNN_FCOLORS='696969696969696969696969'
 export NNN_COLORS='#6969696969'
