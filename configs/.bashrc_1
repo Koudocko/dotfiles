@@ -36,6 +36,7 @@ export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents
 export NNN_PLUG='f:fzcd;o:fzopen;p:preview-tui;i:imgview'
 export NNN_FCOLORS='696969696969696969696969'
 export NNN_COLORS='#6969696969'
+export PFIND_VARS='$HOME/.config/nvim;$HOME/.config/alps/dotfiles'
 
 alias ls='ls --color=auto'
 alias cl='clear'

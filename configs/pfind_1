@@ -1,15 +1,21 @@
 #!/bin/bash
 
+PFIND_VARS=${PFIND_VARS//'$HOME'/"$HOME"}
+PFIND_VARS=${PFIND_VARS//;/"\n"}
+PFIND_VARS=$(echo -e $PFIND_VARS)
 dirs=("$HOME/Documents/work" "$HOME/Documents/school" "$HOME/Documents/personal")
 
-SESSION_DIR=$(for dir in "${dirs[@]}"; do
+OUTPUTS=$(for dir in "${dirs[@]}"; do
   mkdir -p "$dir"
   find "$dir" -maxdepth 1 -mindepth 1 -type d
-done | fzf)
+done)
+
+SESSION_DIR=$(echo -e "$OUTPUTS\n$PFIND_VARS" | fzf)
 
 if [ -n "$SESSION_DIR" ]; then
   SESSION_NAME=(${SESSION_DIR//\// })
   SESSION_NAME="${SESSION_NAME[-2]}/${SESSION_NAME[-1]}"
+  SESSION_NAME=${SESSION_NAME/./_}
 
   if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     hyprctl dispatch movetoworkspace 4 > /dev/null 2>&1

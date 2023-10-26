@@ -50,6 +50,7 @@ if status is-interactive
   set -x NNN_PLUG 'f:fzcd;o:fzopen;p:preview-tui;i:imgview'
   set -x NNN_FCOLORS '696969696969696969696969'
   set -x NNN_COLORS '#6969696969'
+  set -x PFIND_VARS '$HOME/.config/nvim;$HOME/.config/alps/dotfiles'
 
   alias cl 'clear'
   alias neo 'neofetch'
