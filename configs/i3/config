@@ -289,3 +289,13 @@ bindsym $altMod+Shift+7 exec --no-startup-id i3-msg move workspace to output $(c
 bindsym $altMod+Shift+8 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/7)
 bindsym $altMod+Shift+9 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/8)
 bindsym $altMod+Shift+0 exec --no-startup-id i3-msg move workspace to output $(cat /tmp/monitorswitch/9)
+
+# MQ16AH color profile switcher
+bindsym $altMod+q exec monitorddc "Standard"
+bindsym $altMod+w exec monitorddc "sRGB"
+bindsym $altMod+e exec monitorddc "Scenery"
+bindsym $altMod+r exec monitorddc "Theater"
+bindsym $altMod+t exec monitorddc "Game"
+bindsym $altMod+y exec monitorddc "Night View"
+bindsym $altMod+u exec monitorddc "Reading"
+bindsym $altMod+i exec monitorddc "Darkroom"
