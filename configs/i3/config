@@ -249,7 +249,7 @@ bar {
     focused_workspace  #807Bf7 #807Bf7 #000000
     active_workspace   #000000 #000000 #D1C2E9
     inactive_workspace #000000 #000000 #D1C2E9
-    urgent_workspace   #000000 #F77B7B #F77B7B
+    urgent_workspace   #F77B7B #F77B7B #000000
     statusline #D1C2E9
     background #000000 
     separator #807Bf7 
