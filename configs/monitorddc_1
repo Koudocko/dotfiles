@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [[ $1 == "Standard" ]]; then
+  ddcutil setvcp --bus 3 0xdc 0x00
+elif [[ $1 == "sRGB" ]]; then
+  ddcutil setvcp --bus 3 0xdc 0x0d
+elif [[ $1 == "Scenery" ]]; then
+  ddcutil setvcp --bus 3 0xdc 0x0b
+elif [[ $1 == "Theater" ]]; then
+  ddcutil setvcp --bus 3 0xdc 0x03
+elif [[ $1 == "Game" ]]; then
+  ddcutil setvcp --bus 3 0xdc 0x15
+elif [[ $1 == "Night View" ]]; then
+  ddcutil setvcp --bus 3 0xdc 0x16
+elif [[ $1 == "Reading" ]]; then
+  ddcutil setvcp --bus 3 0xdc 0x17
+elif [[ $1 == "Darkroom" ]]; then
+  ddcutil setvcp --bus 3 0xdc 0x18
+fi
+
