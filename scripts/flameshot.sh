@@ -5,6 +5,7 @@ savePath=/home/$HOME/Pictures/Screenshots
 contrastOpacity=188
 disabledTrayIcon=true
 drawColor=#807BF7
+uiColor=#807BF9
 showDesktopNotification=false
 showHelp=false
 showSidePanelButton=true
