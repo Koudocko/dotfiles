@@ -57,4 +57,5 @@ xinput set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.5
 ~/.fehbg &
 easyeffects --gapplication-service &
 fcitx -d &
+copyq --start-server &
 exec i3
