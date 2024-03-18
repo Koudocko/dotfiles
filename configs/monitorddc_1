@@ -16,5 +16,8 @@ elif [[ $1 == "Reading" ]]; then
   ddcutil setvcp --bus 3 0xdc 0x17
 elif [[ $1 == "Darkroom" ]]; then
   ddcutil setvcp --bus 3 0xdc 0x18
+elif [[ $1 == "LightFull" ]]; then
+  ddcutil setvcp --bus 3 0x10 100
+elif [[ $1 == "LightHalf" ]]; then
+  ddcutil setvcp --bus 3 0x10 50
 fi
-
