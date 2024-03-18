@@ -186,8 +186,6 @@ for_window [class=Gimp-2.10] focus
 for_window [class=Qemu-system-x86_64] focus 
 for_window [class=Chromium] focus 
 
-# reload the configuration file
-bindsym $mainMod+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mainMod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -236,6 +234,9 @@ bindsym $altMod+Shift+s exec flameshot gui
 
 # Locks screen
 bindsym $mainMod+Shift+i exec "i3lock -c 000000"
+
+# Copy menu
+bindsym $mainMod+c exec copyq "show"
 
 # Toggle i3bar
 bindsym $mainMod+n exec bartoggle
