@@ -64,4 +64,8 @@ return require('packer').startup(function(use)
   use('lvimuser/lsp-inlayhints.nvim')
 
   use('folke/trouble.nvim')
+
+  use('lervag/vimtex')
+
+  use('jose-elias-alvarez/null-ls.nvim')
 end)
