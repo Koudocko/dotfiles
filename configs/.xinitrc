@@ -52,7 +52,7 @@ monitorswitch
 
 setxkbmap -option compose:ralt
 xinput set-prop "TPPS/2 Elan TrackPoint" "libinput Natural Scrolling Enabled" 0
-xinput set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.5
+xinput set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.25
 
 ~/.fehbg &
 easyeffects --gapplication-service &
