@@ -1,0 +1,20 @@
+#!/bin/sh
+
+swaylock -L \
+  --color 000000 \
+  --bs-hl-color F77B7B \
+  --caps-lock-bs-hl-color F77B7B \
+  --caps-lock-key-hl-color 000000 \
+  --inside-color 000000 \
+  --inside-clear-color 000000 \
+  --inside-caps-lock-color 000000 \
+  --inside-wrong-color 000000 \
+  --inside-ver-color 000000 \
+  --key-hl-color 000000 \
+  --line-uses-inside \
+  --ring-color 807BF9 \
+  --ring-clear-color F7D77B \
+  --ring-caps-lock-color 807BF9 \
+  --ring-ver-color F7D77B \
+  --ring-wrong-color F77B7B \
+
