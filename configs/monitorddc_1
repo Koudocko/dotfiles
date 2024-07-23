@@ -5,39 +5,36 @@ set_bus_num ()
   ddcutil detect --brief | tac | sed -n '/MQ16AH/,/I2C bus/p' | tail -1 | awk -F '-' '{print $NF}' > /tmp/mq16ah_bus
 }
 
-if ! [ -f /tmp/mq16ah_bus ]; then
-  echo "1"
-  set_bus_num
-fi
-
 BUS_NUM=$(cat /tmp/mq16ah_bus)
-while [[ -z $BUS_NUM ]]; do
-  echo "2"
-  set_bus_num 
-  BUS_NUM=$(cat /tmp/mq16ah_bus)
+STATUS=1
+
+while [ $STATUS -eq 1 ]; do
+  if [[ $1 == "Standard" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0xdc 0x00
+  elif [[ $1 == "sRGB" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0xdc 0x0d
+  elif [[ $1 == "Scenery" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0xdc 0x0b
+  elif [[ $1 == "Theater" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0xdc 0x03
+  elif [[ $1 == "Game" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0xdc 0x15
+  elif [[ $1 == "Night View" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0xdc 0x16
+  elif [[ $1 == "Reading" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0xdc 0x17
+  elif [[ $1 == "Darkroom" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0xdc 0x18
+  elif [[ $1 == "LightFull" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0x10 100
+  elif [[ $1 == "LightHalf" ]]; then
+    ddcutil setvcp --bus=$BUS_NUM 0x10 50
+  fi
+
+  STATUS=$?
+
+  if [ $STATUS -eq 1 ]; then
+    set_bus_num
+    BUS_NUM=$(cat /tmp/mq16ah_bus)
+  fi
 done
-
-echo "ACTUAL: $(cat /tmp/mq16ah_bus)"
-echo "BUS NUM: $BUS_NUM"
-
-if [[ $1 == "Standard" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0xdc 0x00
-elif [[ $1 == "sRGB" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0xdc 0x0d
-elif [[ $1 == "Scenery" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0xdc 0x0b
-elif [[ $1 == "Theater" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0xdc 0x03
-elif [[ $1 == "Game" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0xdc 0x15
-elif [[ $1 == "Night View" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0xdc 0x16
-elif [[ $1 == "Reading" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0xdc 0x17
-elif [[ $1 == "Darkroom" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0xdc 0x18
-elif [[ $1 == "LightFull" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0x10 100
-elif [[ $1 == "LightHalf" ]]; then
-  ddcutil setvcp --bus=$BUS_NUM 0x10 50
-fi
