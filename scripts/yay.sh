@@ -4,7 +4,7 @@
 
 
 if pacman -Q yay > /dev/null 2>&1; then
-	list="ani-cli osu-lazer-bin anki-bin youtube-music-bin"
+	list="ani-cli osu-lazer-bin anki-bin youtube-music-bin flameshot-git"
 	packages=
 
 	for package in $list
