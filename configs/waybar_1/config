@@ -58,13 +58,15 @@
         "tooltip": false
     },
     "network": {
-        // "interface": "wlp2*", 
+        // "interface": "wlp2*",
+        "interval": 1,
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr} ",
+        // "format-alt": "{ifname}: {ipaddr}/{cidr} ",
+        "format-alt": "{bandwidthUpBytes}  {bandwidthDownBytes} ",
         "tooltip": false
     },
     "cpu": {
