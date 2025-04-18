@@ -11,6 +11,7 @@ if status is-interactive
   xmodmap -e "pointer = 1 2 3" > /dev/null 2>&1
 
   function fish_prompt 
+      set_color FA5F5F
       printf '[%s] > %s' (prompt_pwd -d 3) (set_color normal)
   end
 
@@ -48,9 +49,11 @@ if status is-interactive
   set -x EDITOR nvim
   set -x NNN_BMS 'b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos;V:~/VirtualMachines;m:~/Music;a:~/.config/alps/dotfiles'
   set -x NNN_PLUG 'f:fzcd;o:fzopen;p:preview-tui;i:imgview'
-  set -x NNN_FCOLORS '696969696969696969696969'
-  set -x NNN_COLORS '#6969696969'
+  set -x NNN_FCOLORS 'FFFFFFFFFFFFFFFFFFFFFFFF'
+  #set -x NNN_COLORS '#FFFFFFFFFF'
+  set -x NNN_COLORS '1111'
   set -x PFIND_VARS '$HOME/.config/nvim;$HOME/.config/alps/dotfiles'
+  set fzf_fd_opts --hidden
 
   alias cl 'clear'
   alias neo 'neofetch'
@@ -58,6 +61,7 @@ if status is-interactive
   alias syspo 'systemctl poweroff'
   alias sysrb 'systemctl reboot'
   alias vidsave 'yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
+  alias condroid 'pkill adb; adb kill-server; adb connect 192.168.44.1:5555; scrcpy -s 192.168.44.1:5555 --shortcut-mod=lsuper --no-audio --video-bit-rate 1M --max-size 920 --max-fps 15'
 
   bind \cs 'tfind'
   bind \cy 'pfind'

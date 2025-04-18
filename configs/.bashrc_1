@@ -34,8 +34,9 @@ export FZF_DEFAULT_COMMAND="find"
 export EDITOR=nvim
 export NNN_BMS='b:bookmarks;p:~/Pictures;d:~/Downloads;c:~/.config;D:~/Documents;v:~/Videos;V:~/VirtualMachines;m:~/Music;a:~/.config/alps/dotfiles'
 export NNN_PLUG='f:fzcd;o:fzopen;p:preview-tui;i:imgview'
-export NNN_FCOLORS='696969696969696969696969'
-export NNN_COLORS='#6969696969'
+export NNN_FCOLORS='FFFFFFFFFFFFFFFFFFFFFFFF'
+# export NNN_COLORS='#FFFFFFFFFF'
+export NNN_COLORS='1111'
 export PFIND_VARS='$HOME/.config/nvim;$HOME/.config/alps/dotfiles'
 
 alias ls='ls --color=auto'
@@ -45,6 +46,7 @@ alias uwu='uwufetch'
 alias syspo='systemctl poweroff'
 alias sysrb='systemctl reboot'
 alias vidsave='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
+alias condroid='pkill adb; adb kill-server; adb connect 192.168.44.1:5555; scrcpy -s 192.168.44.1:5555 --shortcut-mod=lsuper --no-audio --video-bit-rate 1M --max-size 920 --max-fps 15'
 
 bind -x '"\C-s":"tfind"'
 bind -x '"\C-y":"pfind"'
