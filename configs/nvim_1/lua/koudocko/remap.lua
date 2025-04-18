@@ -47,3 +47,7 @@ vim.keymap.set("n", "<C-w>t", ":tabnext<Space>")
 vim.keymap.set("t", "jk", "<C-\\><C-n>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("n", "<C-w>m", [[:split | term bash -c 'cd "%:p:h" && exec bash' <CR>]], { silent = true })
+vim.g['copilot_no_tab_map'] = true
+vim.g['copilot_assume_mapped'] = true
+vim.api.nvim_set_keymap('i', '<C-f>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
+vim.api.nvim_set_keymap('i', '<C-f>', 'copilot#Accept("<CR>")', {expr=true, silent=true})

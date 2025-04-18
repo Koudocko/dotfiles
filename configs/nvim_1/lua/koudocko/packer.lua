@@ -68,4 +68,11 @@ return require('packer').startup(function(use)
   use('lervag/vimtex')
 
   use('jose-elias-alvarez/null-ls.nvim')
+
+  -- use('github/copilot.vim')
+  use('zbirenbaum/copilot.lua')
+
+  use('benknoble/vim-racket')
+
+  use('tpope/vim-surround')
 end)

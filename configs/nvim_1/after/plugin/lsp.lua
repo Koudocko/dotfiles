@@ -53,6 +53,8 @@ require("rust-tools").setup({
     }
 })
 
+require('lspconfig').racket_langserver.setup{}
+
 vim.diagnostic.config({
     virtual_text = true
 })

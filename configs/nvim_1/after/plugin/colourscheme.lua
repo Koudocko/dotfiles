@@ -144,7 +144,14 @@ onedark.setup {
 
     -- Custom Highlights --
     colors = {}, -- Override default colors
-    highlights = {}, -- Override highlight groups
+    highlights = {
+      number = { fg = "#000000", bg = "#ffffff", gui = "bold" },
+      statusline = { fg = "#000000", bg = "#ffffff", gui = "bold" },
+      ModeMsg = { fg = "#FFFFFF", gui = "bold" },
+      MsgArea = { fg = "#FFFFFF", gui = "bold" },
+      NormalFloat = { fg = "#FFFFFF" },
+      Normal= { fg = "#FFFFFF" },
+    }, -- Override highlight groups
 
     -- Plugins Config --
     diagnostics = {

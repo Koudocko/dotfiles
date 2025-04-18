@@ -13,6 +13,12 @@ cmp.setup({
   },
   mapping = {
     ['<ENTER>'] = cmp.mapping.confirm({ select = true }),
+    ['<Tab>'] = {
+      i = cmp.config.disable,
+    },
+    ['<S-Tab>'] = {
+      i = cmp.config.disable,
+    },
     ['<C-e>'] = cmp.mapping.abort(),
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),

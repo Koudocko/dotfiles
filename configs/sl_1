@@ -12,9 +12,8 @@ swaylock -L \
   --inside-ver-color 000000 \
   --key-hl-color 000000 \
   --line-uses-inside \
-  --ring-color 807BF9 \
+  --ring-color FFFFFF \
   --ring-clear-color F7D77B \
-  --ring-caps-lock-color 807BF9 \
+  --ring-caps-lock-color FFFFFF \
   --ring-ver-color F7D77B \
   --ring-wrong-color F77B7B \
-
